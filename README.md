@@ -1,4 +1,4 @@
-# Triplet Contrastive Learning
+# Triplet Contrastive Learning For Aspect Level Sentiment Classification
 
 code and datasets of "Triplet Contrastive Learning For Aspect Level Sentiment Classification"
 
