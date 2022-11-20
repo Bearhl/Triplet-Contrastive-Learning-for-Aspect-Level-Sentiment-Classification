@@ -1,0 +1,837 @@
+choice cuda:0
+cuda memory allocated: 2290148352
+n_trainable_params: 112454865, n_nontrainable_params: 0
+training arguments:
+>>> model_name: tclbert
+>>> dataset: restaurant
+>>> optimizer: <class 'torch.optim.adam.Adam'>
+>>> initializer: <function xavier_uniform_ at 0x7f8d9926a5f0>
+>>> learning_rate: 0.002
+>>> l2reg: 0.0001
+>>> num_epoch: 15
+>>> batch_size: 16
+>>> log_step: 5
+>>> embed_dim: 300
+>>> post_dim: 30
+>>> pos_dim: 30
+>>> deptag_dim: 30
+>>> hidden_dim: 768
+>>> num_layers: 2
+>>> polarities_dim: 3
+>>> input_dropout: 0.7
+>>> gcn_dropout: 0.1
+>>> lower: True
+>>> direct: False
+>>> loop: True
+>>> bidirect: True
+>>> rnn_hidden: 50
+>>> rnn_layers: 1
+>>> rnn_dropout: 0.1
+>>> attention_heads: 1
+>>> max_length: 100
+>>> device: cuda
+>>> seed: 1000
+>>> weight_decay: 0.0
+>>> vocab_dir: ./dataset/Laptops_corenlp
+>>> pad_id: 0
+>>> parseadj: False
+>>> parsehead: False
+>>> reshape: True
+>>> cuda: 0
+>>> losstype: orthogonalloss
+>>> alpha: 0.2
+>>> beta: 0.5
+>>> theta: 1
+>>> gamma: 0.4
+>>> temperature: 0.1
+>>> pretrained_bert_name: bert-base-uncased
+>>> adam_epsilon: 1e-08
+>>> bert_dim: 768
+>>> bert_dropout: 0.3
+>>> diff_lr: False
+>>> bert_lr: 2e-05
+>>> model_class: <class 'models.tcl_bert.TCLBertClassifier'>
+>>> dataset_file: {'train': './dataset/Restaurants_corenlp/train.json', 'test': './dataset/Restaurants_corenlp/test.json'}
+>>> inputs_cols: ['text_bert_indices', 'bert_segments_ids', 'attention_mask', 'asp_start', 'asp_end', 'adj_matrix', 'src_mask', 'aspect_mask', 'deptag', 'pos_mask']
+>>> deptag_size: 41
+bert learning rate on
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 0
+>> saved: ./state_dict/tclbert_restaurant_acc_0.2359_f1_0.2375
+con_loss1: 4.1469, con_loss2: 2.9384, dep_loss: 5.2983, loss: 6.7819, acc: 0.1875, test_acc: 0.2359, f1: 0.2375
+>> saved: ./state_dict/tclbert_restaurant_acc_0.3646_f1_0.3282
+con_loss1: 3.2010, con_loss2: 2.9257, dep_loss: 5.2983, loss: 6.3105, acc: 0.2188, test_acc: 0.3646, f1: 0.3282
+>> saved: ./state_dict/tclbert_restaurant_acc_0.4718_f1_0.3277
+con_loss1: 3.1519, con_loss2: 2.8217, dep_loss: 5.2983, loss: 6.1327, acc: 0.2917, test_acc: 0.4718, f1: 0.3277
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6345_f1_0.2864
+con_loss1: 3.3667, con_loss2: 2.6669, dep_loss: 5.2983, loss: 6.0280, acc: 0.4062, test_acc: 0.6345, f1: 0.2864
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6488_f1_0.2811
+con_loss1: 3.3043, con_loss2: 2.8454, dep_loss: 5.2983, loss: 6.1544, acc: 0.4375, test_acc: 0.6488, f1: 0.2811
+con_loss1: 3.1646, con_loss2: 2.7779, dep_loss: 5.2983, loss: 6.0485, acc: 0.4896, test_acc: 0.6479, f1: 0.2778
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6497_f1_0.2843
+con_loss1: 3.2077, con_loss2: 2.8352, dep_loss: 5.2983, loss: 6.2682, acc: 0.4732, test_acc: 0.6497, f1: 0.2843
+con_loss1: 3.0601, con_loss2: 2.7748, dep_loss: 5.2983, loss: 5.8556, acc: 0.5078, test_acc: 0.6497, f1: 0.2843
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6524_f1_0.2881
+con_loss1: 3.1177, con_loss2: 2.7641, dep_loss: 5.2983, loss: 6.0096, acc: 0.5208, test_acc: 0.6524, f1: 0.2881
+con_loss1: 3.1748, con_loss2: 2.7805, dep_loss: 5.2983, loss: 6.0830, acc: 0.5250, test_acc: 0.6524, f1: 0.2881
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6533_f1_0.2913
+con_loss1: 3.0139, con_loss2: 2.7832, dep_loss: 5.2983, loss: 5.9074, acc: 0.5398, test_acc: 0.6533, f1: 0.2913
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6550_f1_0.2976
+con_loss1: 3.1410, con_loss2: 2.7653, dep_loss: 5.2983, loss: 5.8708, acc: 0.5573, test_acc: 0.6550, f1: 0.2976
+con_loss1: 2.9821, con_loss2: 2.7849, dep_loss: 5.2983, loss: 6.1076, acc: 0.5529, test_acc: 0.6550, f1: 0.2976
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6595_f1_0.3148
+con_loss1: 2.7814, con_loss2: 2.6167, dep_loss: 5.2983, loss: 5.6226, acc: 0.5670, test_acc: 0.6595, f1: 0.3148
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6622_f1_0.3185
+con_loss1: 2.7447, con_loss2: 2.6033, dep_loss: 5.2983, loss: 5.6233, acc: 0.5708, test_acc: 0.6622, f1: 0.3185
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6685_f1_0.3400
+con_loss1: 2.8791, con_loss2: 2.5888, dep_loss: 5.2983, loss: 5.5540, acc: 0.5820, test_acc: 0.6685, f1: 0.3400
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6729_f1_0.3520
+con_loss1: 2.9583, con_loss2: 2.7609, dep_loss: 5.2983, loss: 6.0821, acc: 0.5809, test_acc: 0.6729, f1: 0.3520
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6792_f1_0.3704
+con_loss1: 2.9243, con_loss2: 2.7636, dep_loss: 5.2983, loss: 5.9455, acc: 0.5799, test_acc: 0.6792, f1: 0.3704
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6819_f1_0.3831
+con_loss1: 2.9165, con_loss2: 2.7734, dep_loss: 5.2983, loss: 5.6501, acc: 0.5921, test_acc: 0.6819, f1: 0.3831
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6917_f1_0.4127
+con_loss1: 2.9052, con_loss2: 2.8090, dep_loss: 5.2983, loss: 5.8265, acc: 0.5969, test_acc: 0.6917, f1: 0.4127
+con_loss1: 2.9644, con_loss2: 2.7747, dep_loss: 5.2983, loss: 5.9658, acc: 0.5923, test_acc: 0.6765, f1: 0.4323
+>> saved: ./state_dict/tclbert_restaurant_acc_0.6953_f1_0.4466
+con_loss1: 2.8418, con_loss2: 2.7705, dep_loss: 5.2983, loss: 5.8134, acc: 0.5994, test_acc: 0.6953, f1: 0.4466
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7158_f1_0.4604
+con_loss1: 2.6913, con_loss2: 2.6153, dep_loss: 5.2983, loss: 5.6360, acc: 0.6005, test_acc: 0.7158, f1: 0.4604
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7176_f1_0.4537
+con_loss1: 2.8843, con_loss2: 2.7663, dep_loss: 5.2983, loss: 5.9537, acc: 0.5964, test_acc: 0.7176, f1: 0.4537
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7239_f1_0.4642
+con_loss1: 2.9361, con_loss2: 2.7544, dep_loss: 5.2983, loss: 5.5353, acc: 0.6000, test_acc: 0.7239, f1: 0.4642
+con_loss1: 2.8459, con_loss2: 2.7688, dep_loss: 5.2983, loss: 5.7959, acc: 0.6010, test_acc: 0.7105, f1: 0.4738
+con_loss1: 2.7711, con_loss2: 2.5946, dep_loss: 5.2983, loss: 5.5522, acc: 0.6042, test_acc: 0.7203, f1: 0.4835
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7301_f1_0.4734
+con_loss1: 2.7368, con_loss2: 2.5928, dep_loss: 5.2983, loss: 5.3355, acc: 0.6116, test_acc: 0.7301, f1: 0.4734
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7328_f1_0.4820
+con_loss1: 2.9707, con_loss2: 2.7895, dep_loss: 5.2983, loss: 5.7020, acc: 0.6164, test_acc: 0.7328, f1: 0.4820
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7453_f1_0.5046
+con_loss1: 2.9022, con_loss2: 2.7972, dep_loss: 5.2983, loss: 5.7075, acc: 0.6188, test_acc: 0.7453, f1: 0.5046
+con_loss1: 2.9013, con_loss2: 2.7726, dep_loss: 5.2983, loss: 5.7933, acc: 0.6149, test_acc: 0.7122, f1: 0.4909
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7551_f1_0.5233
+con_loss1: 2.9118, con_loss2: 2.7792, dep_loss: 5.2983, loss: 5.5308, acc: 0.6191, test_acc: 0.7551, f1: 0.5233
+con_loss1: 2.8166, con_loss2: 2.7611, dep_loss: 5.2983, loss: 5.9610, acc: 0.6174, test_acc: 0.7239, f1: 0.4695
+con_loss1: 2.8986, con_loss2: 2.7976, dep_loss: 5.2983, loss: 5.7840, acc: 0.6140, test_acc: 0.7283, f1: 0.4807
+con_loss1: 2.8382, con_loss2: 2.7548, dep_loss: 5.2983, loss: 5.8936, acc: 0.6143, test_acc: 0.7417, f1: 0.4984
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7641_f1_0.5421
+con_loss1: 2.8608, con_loss2: 2.7830, dep_loss: 5.2983, loss: 5.9587, acc: 0.6094, test_acc: 0.7641, f1: 0.5421
+con_loss1: 2.8910, con_loss2: 2.7731, dep_loss: 5.2983, loss: 5.6462, acc: 0.6132, test_acc: 0.7516, f1: 0.5543
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7775_f1_0.5818
+con_loss1: 2.7622, con_loss2: 2.7104, dep_loss: 5.2983, loss: 5.4897, acc: 0.6168, test_acc: 0.7775, f1: 0.5818
+con_loss1: 2.8226, con_loss2: 2.7746, dep_loss: 5.2983, loss: 5.4374, acc: 0.6218, test_acc: 0.7542, f1: 0.5365
+con_loss1: 2.9470, con_loss2: 2.7868, dep_loss: 5.2983, loss: 5.5350, acc: 0.6250, test_acc: 0.7391, f1: 0.4983
+con_loss1: 2.6360, con_loss2: 2.5749, dep_loss: 5.2983, loss: 5.3579, acc: 0.6280, test_acc: 0.7417, f1: 0.5088
+con_loss1: 2.8184, con_loss2: 2.7849, dep_loss: 5.2983, loss: 5.9651, acc: 0.6250, test_acc: 0.7748, f1: 0.5705
+con_loss1: 2.8460, con_loss2: 2.8107, dep_loss: 5.2983, loss: 5.7892, acc: 0.6265, test_acc: 0.7650, f1: 0.5667
+con_loss1: 2.8471, con_loss2: 2.8044, dep_loss: 5.2983, loss: 5.8300, acc: 0.6250, test_acc: 0.7712, f1: 0.5716
+con_loss1: 2.7770, con_loss2: 2.7531, dep_loss: 5.2983, loss: 5.6522, acc: 0.6278, test_acc: 0.7766, f1: 0.5670
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 1
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7819_f1_0.5746
+con_loss1: 2.5704, con_loss2: 2.5952, dep_loss: 5.2983, loss: 5.1488, acc: 0.8750, test_acc: 0.7819, f1: 0.5746
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7828_f1_0.5869
+con_loss1: 2.6695, con_loss2: 2.6594, dep_loss: 5.2983, loss: 5.4565, acc: 0.8125, test_acc: 0.7828, f1: 0.5869
+con_loss1: 2.7483, con_loss2: 2.7152, dep_loss: 5.2983, loss: 5.3413, acc: 0.8125, test_acc: 0.7784, f1: 0.5831
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7846_f1_0.5932
+con_loss1: 2.6357, con_loss2: 2.6373, dep_loss: 5.2983, loss: 5.1537, acc: 0.8281, test_acc: 0.7846, f1: 0.5932
+con_loss1: 2.5923, con_loss2: 2.4435, dep_loss: 5.2983, loss: 5.3044, acc: 0.8250, test_acc: 0.7846, f1: 0.5958
+con_loss1: 2.7885, con_loss2: 2.6878, dep_loss: 5.2983, loss: 5.1737, acc: 0.8333, test_acc: 0.7757, f1: 0.5823
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7900_f1_0.6214
+con_loss1: 2.6148, con_loss2: 2.5667, dep_loss: 5.2983, loss: 5.0591, acc: 0.8304, test_acc: 0.7900, f1: 0.6214
+con_loss1: 2.4945, con_loss2: 2.4698, dep_loss: 5.2983, loss: 5.0690, acc: 0.8359, test_acc: 0.7891, f1: 0.6263
+con_loss1: 2.8875, con_loss2: 2.8481, dep_loss: 5.2983, loss: 5.6108, acc: 0.8194, test_acc: 0.7837, f1: 0.6199
+con_loss1: 2.6150, con_loss2: 2.5757, dep_loss: 5.2983, loss: 5.2535, acc: 0.8125, test_acc: 0.7873, f1: 0.6298
+con_loss1: 2.7007, con_loss2: 2.6711, dep_loss: 5.2983, loss: 5.4942, acc: 0.8068, test_acc: 0.7882, f1: 0.6304
+con_loss1: 2.5952, con_loss2: 2.5300, dep_loss: 5.2983, loss: 5.2272, acc: 0.8073, test_acc: 0.7900, f1: 0.6422
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7909_f1_0.6408
+con_loss1: 2.6850, con_loss2: 2.6700, dep_loss: 5.2983, loss: 5.2262, acc: 0.8125, test_acc: 0.7909, f1: 0.6408
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7918_f1_0.6390
+con_loss1: 2.9170, con_loss2: 2.9045, dep_loss: 5.2983, loss: 6.1512, acc: 0.7946, test_acc: 0.7918, f1: 0.6390
+con_loss1: 2.5678, con_loss2: 2.5206, dep_loss: 5.2983, loss: 5.4902, acc: 0.7917, test_acc: 0.7828, f1: 0.6254
+con_loss1: 2.8267, con_loss2: 2.8029, dep_loss: 5.2983, loss: 5.4739, acc: 0.7891, test_acc: 0.7828, f1: 0.6264
+con_loss1: 2.6003, con_loss2: 2.5860, dep_loss: 5.2983, loss: 5.3756, acc: 0.7904, test_acc: 0.7837, f1: 0.6175
+con_loss1: 2.7402, con_loss2: 2.7188, dep_loss: 5.2983, loss: 5.4900, acc: 0.7882, test_acc: 0.7846, f1: 0.6157
+con_loss1: 2.5572, con_loss2: 2.5213, dep_loss: 5.2983, loss: 5.0068, acc: 0.7928, test_acc: 0.7855, f1: 0.6028
+con_loss1: 2.6729, con_loss2: 2.6567, dep_loss: 5.2983, loss: 5.4986, acc: 0.7875, test_acc: 0.7828, f1: 0.6032
+con_loss1: 2.7722, con_loss2: 2.7456, dep_loss: 5.2983, loss: 5.6976, acc: 0.7857, test_acc: 0.7775, f1: 0.5862
+con_loss1: 2.7096, con_loss2: 2.6776, dep_loss: 5.2983, loss: 5.5618, acc: 0.7756, test_acc: 0.7819, f1: 0.5914
+con_loss1: 2.6205, con_loss2: 2.5937, dep_loss: 5.2983, loss: 5.3780, acc: 0.7690, test_acc: 0.7811, f1: 0.5928
+con_loss1: 2.8376, con_loss2: 2.7999, dep_loss: 5.2983, loss: 5.2659, acc: 0.7760, test_acc: 0.7802, f1: 0.6169
+con_loss1: 2.9636, con_loss2: 2.9548, dep_loss: 5.2983, loss: 5.8854, acc: 0.7725, test_acc: 0.7828, f1: 0.6209
+con_loss1: 2.7361, con_loss2: 2.6831, dep_loss: 5.2983, loss: 5.8545, acc: 0.7644, test_acc: 0.7891, f1: 0.6200
+con_loss1: 2.6674, con_loss2: 2.6005, dep_loss: 5.2983, loss: 5.2166, acc: 0.7639, test_acc: 0.7909, f1: 0.6306
+con_loss1: 2.9274, con_loss2: 2.8836, dep_loss: 5.2983, loss: 5.9438, acc: 0.7612, test_acc: 0.7811, f1: 0.6119
+con_loss1: 2.6668, con_loss2: 2.6009, dep_loss: 5.2983, loss: 5.3669, acc: 0.7565, test_acc: 0.7819, f1: 0.6216
+con_loss1: 2.5742, con_loss2: 2.5645, dep_loss: 5.2983, loss: 5.1370, acc: 0.7604, test_acc: 0.7909, f1: 0.6342
+con_loss1: 2.6011, con_loss2: 2.5975, dep_loss: 5.2983, loss: 5.1927, acc: 0.7641, test_acc: 0.7855, f1: 0.6132
+con_loss1: 2.5849, con_loss2: 2.5342, dep_loss: 5.2983, loss: 5.2260, acc: 0.7656, test_acc: 0.7918, f1: 0.6195
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7954_f1_0.6326
+con_loss1: 2.9581, con_loss2: 2.8994, dep_loss: 5.2983, loss: 5.8597, acc: 0.7633, test_acc: 0.7954, f1: 0.6326
+con_loss1: 2.7737, con_loss2: 2.7236, dep_loss: 5.2983, loss: 5.4886, acc: 0.7610, test_acc: 0.7873, f1: 0.6020
+con_loss1: 2.7648, con_loss2: 2.7033, dep_loss: 5.2983, loss: 5.4540, acc: 0.7625, test_acc: 0.7918, f1: 0.6161
+con_loss1: 2.7902, con_loss2: 2.6870, dep_loss: 5.2983, loss: 5.4472, acc: 0.7604, test_acc: 0.7909, f1: 0.6164
+con_loss1: 2.8541, con_loss2: 2.8321, dep_loss: 5.2983, loss: 5.8464, acc: 0.7568, test_acc: 0.7864, f1: 0.6243
+con_loss1: 2.5962, con_loss2: 2.5815, dep_loss: 5.2983, loss: 5.1833, acc: 0.7599, test_acc: 0.7918, f1: 0.6396
+con_loss1: 2.5036, con_loss2: 2.5197, dep_loss: 5.2983, loss: 4.9381, acc: 0.7628, test_acc: 0.7891, f1: 0.6346
+con_loss1: 2.8045, con_loss2: 2.6819, dep_loss: 5.2983, loss: 5.6009, acc: 0.7594, test_acc: 0.7891, f1: 0.6320
+con_loss1: 2.5271, con_loss2: 2.5316, dep_loss: 5.2983, loss: 5.1566, acc: 0.7607, test_acc: 0.7855, f1: 0.6296
+con_loss1: 2.4846, con_loss2: 2.4471, dep_loss: 5.2983, loss: 5.2727, acc: 0.7619, test_acc: 0.7855, f1: 0.6283
+con_loss1: 2.6899, con_loss2: 2.6741, dep_loss: 5.2983, loss: 5.3174, acc: 0.7631, test_acc: 0.7873, f1: 0.6241
+con_loss1: 2.4471, con_loss2: 2.4194, dep_loss: 5.2983, loss: 4.9608, acc: 0.7670, test_acc: 0.7936, f1: 0.6347
+>> saved: ./state_dict/tclbert_restaurant_acc_0.7998_f1_0.6507
+con_loss1: 2.7864, con_loss2: 2.7309, dep_loss: 5.2983, loss: 5.6210, acc: 0.7653, test_acc: 0.7998, f1: 0.6507
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 2
+con_loss1: 2.5236, con_loss2: 2.5255, dep_loss: 5.2983, loss: 5.1493, acc: 0.8125, test_acc: 0.7873, f1: 0.6221
+con_loss1: 2.5954, con_loss2: 2.5796, dep_loss: 5.2983, loss: 5.0255, acc: 0.8750, test_acc: 0.7945, f1: 0.6436
+con_loss1: 2.3950, con_loss2: 2.3482, dep_loss: 5.2983, loss: 4.8423, acc: 0.8958, test_acc: 0.7909, f1: 0.6757
+con_loss1: 2.8014, con_loss2: 2.7628, dep_loss: 5.2983, loss: 5.5614, acc: 0.8594, test_acc: 0.7909, f1: 0.6731
+con_loss1: 2.6769, con_loss2: 2.5898, dep_loss: 5.2983, loss: 5.3478, acc: 0.8375, test_acc: 0.7936, f1: 0.6331
+con_loss1: 2.5974, con_loss2: 2.5438, dep_loss: 5.2983, loss: 4.9701, acc: 0.8333, test_acc: 0.7927, f1: 0.6389
+con_loss1: 2.9588, con_loss2: 2.9015, dep_loss: 5.2983, loss: 5.7359, acc: 0.8304, test_acc: 0.7998, f1: 0.6632
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8034_f1_0.7017
+con_loss1: 2.5505, con_loss2: 2.5419, dep_loss: 5.2983, loss: 5.1944, acc: 0.8281, test_acc: 0.8034, f1: 0.7017
+con_loss1: 2.4904, con_loss2: 2.4821, dep_loss: 5.2983, loss: 4.9963, acc: 0.8403, test_acc: 0.7864, f1: 0.6959
+con_loss1: 2.6678, con_loss2: 2.6250, dep_loss: 5.2983, loss: 5.1631, acc: 0.8438, test_acc: 0.7962, f1: 0.6776
+con_loss1: 2.4075, con_loss2: 2.3912, dep_loss: 5.2983, loss: 5.1551, acc: 0.8409, test_acc: 0.7954, f1: 0.6370
+con_loss1: 2.5987, con_loss2: 2.5905, dep_loss: 5.2983, loss: 5.0977, acc: 0.8490, test_acc: 0.7945, f1: 0.6307
+con_loss1: 2.7873, con_loss2: 2.7799, dep_loss: 5.2983, loss: 5.7526, acc: 0.8269, test_acc: 0.8016, f1: 0.6479
+con_loss1: 2.9133, con_loss2: 2.8659, dep_loss: 5.2983, loss: 5.6758, acc: 0.8170, test_acc: 0.7918, f1: 0.6341
+con_loss1: 2.3082, con_loss2: 2.2597, dep_loss: 5.2983, loss: 4.7608, acc: 0.8167, test_acc: 0.7864, f1: 0.6363
+con_loss1: 2.5095, con_loss2: 2.4668, dep_loss: 5.2983, loss: 5.0672, acc: 0.8164, test_acc: 0.7909, f1: 0.6653
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8052_f1_0.6819
+con_loss1: 2.7543, con_loss2: 2.7218, dep_loss: 5.2983, loss: 5.4573, acc: 0.8088, test_acc: 0.8052, f1: 0.6819
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8141_f1_0.6989
+con_loss1: 2.4927, con_loss2: 2.4862, dep_loss: 5.2983, loss: 5.1741, acc: 0.8021, test_acc: 0.8141, f1: 0.6989
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8222_f1_0.7199
+con_loss1: 2.3143, con_loss2: 2.3115, dep_loss: 5.2983, loss: 4.7264, acc: 0.8125, test_acc: 0.8222, f1: 0.7199
+con_loss1: 2.2679, con_loss2: 2.2342, dep_loss: 5.2983, loss: 4.7063, acc: 0.8187, test_acc: 0.8088, f1: 0.7006
+con_loss1: 2.8373, con_loss2: 2.8285, dep_loss: 5.2983, loss: 5.4677, acc: 0.8185, test_acc: 0.8016, f1: 0.6875
+con_loss1: 2.4229, con_loss2: 2.3531, dep_loss: 5.2983, loss: 4.9523, acc: 0.8153, test_acc: 0.8043, f1: 0.6541
+con_loss1: 2.7195, con_loss2: 2.6475, dep_loss: 5.2983, loss: 5.3816, acc: 0.8152, test_acc: 0.8043, f1: 0.6595
+con_loss1: 2.5138, con_loss2: 2.4651, dep_loss: 5.2983, loss: 4.9518, acc: 0.8151, test_acc: 0.8114, f1: 0.6885
+con_loss1: 2.4194, con_loss2: 2.4068, dep_loss: 5.2983, loss: 4.8015, acc: 0.8200, test_acc: 0.8052, f1: 0.6765
+con_loss1: 2.7140, con_loss2: 2.6649, dep_loss: 5.2983, loss: 5.4038, acc: 0.8173, test_acc: 0.8168, f1: 0.7030
+con_loss1: 2.5907, con_loss2: 2.5773, dep_loss: 5.2983, loss: 5.2408, acc: 0.8171, test_acc: 0.8079, f1: 0.6806
+con_loss1: 2.4244, con_loss2: 2.3913, dep_loss: 5.2983, loss: 4.9456, acc: 0.8147, test_acc: 0.8016, f1: 0.6665
+con_loss1: 2.1739, con_loss2: 2.1656, dep_loss: 5.2983, loss: 4.6066, acc: 0.8190, test_acc: 0.8052, f1: 0.6765
+con_loss1: 2.5448, con_loss2: 2.5255, dep_loss: 5.2983, loss: 5.4449, acc: 0.8167, test_acc: 0.8222, f1: 0.7205
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8231_f1_0.7255
+con_loss1: 2.7210, con_loss2: 2.7061, dep_loss: 5.2983, loss: 5.4267, acc: 0.8185, test_acc: 0.8231, f1: 0.7255
+con_loss1: 2.9404, con_loss2: 2.9131, dep_loss: 5.2983, loss: 5.8129, acc: 0.8145, test_acc: 0.8204, f1: 0.7001
+con_loss1: 2.5568, con_loss2: 2.5381, dep_loss: 5.2983, loss: 5.0330, acc: 0.8163, test_acc: 0.8114, f1: 0.6742
+con_loss1: 2.4605, con_loss2: 2.4556, dep_loss: 5.2983, loss: 4.9420, acc: 0.8162, test_acc: 0.8097, f1: 0.6646
+con_loss1: 2.4793, con_loss2: 2.4209, dep_loss: 5.2983, loss: 4.9678, acc: 0.8161, test_acc: 0.8114, f1: 0.6719
+con_loss1: 2.8430, con_loss2: 2.8075, dep_loss: 5.2983, loss: 5.4402, acc: 0.8160, test_acc: 0.8168, f1: 0.7042
+con_loss1: 2.4972, con_loss2: 2.5038, dep_loss: 5.2983, loss: 4.9336, acc: 0.8193, test_acc: 0.8159, f1: 0.7169
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8284_f1_0.7231
+con_loss1: 2.4071, con_loss2: 2.4107, dep_loss: 5.2983, loss: 4.9247, acc: 0.8207, test_acc: 0.8284, f1: 0.7231
+con_loss1: 2.5274, con_loss2: 2.4910, dep_loss: 5.2983, loss: 5.0928, acc: 0.8189, test_acc: 0.8257, f1: 0.7069
+con_loss1: 2.4554, con_loss2: 2.4406, dep_loss: 5.2983, loss: 5.2041, acc: 0.8187, test_acc: 0.8248, f1: 0.7037
+con_loss1: 2.6054, con_loss2: 2.6059, dep_loss: 5.2983, loss: 5.3277, acc: 0.8186, test_acc: 0.8222, f1: 0.6999
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8347_f1_0.7340
+con_loss1: 2.3308, con_loss2: 2.3367, dep_loss: 5.2983, loss: 4.8250, acc: 0.8185, test_acc: 0.8347, f1: 0.7340
+con_loss1: 2.5815, con_loss2: 2.5455, dep_loss: 5.2983, loss: 4.9178, acc: 0.8212, test_acc: 0.8275, f1: 0.7262
+con_loss1: 2.3457, con_loss2: 2.3424, dep_loss: 5.2983, loss: 4.7070, acc: 0.8239, test_acc: 0.8284, f1: 0.7374
+con_loss1: 2.6550, con_loss2: 2.5945, dep_loss: 5.2983, loss: 5.2865, acc: 0.8250, test_acc: 0.8257, f1: 0.7268
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 3
+con_loss1: 2.3958, con_loss2: 2.3643, dep_loss: 5.2983, loss: 4.7050, acc: 0.9375, test_acc: 0.8239, f1: 0.7043
+con_loss1: 2.3056, con_loss2: 2.2669, dep_loss: 5.2983, loss: 4.6376, acc: 0.9375, test_acc: 0.8177, f1: 0.6857
+con_loss1: 2.1974, con_loss2: 2.1798, dep_loss: 5.2983, loss: 4.7242, acc: 0.8958, test_acc: 0.8239, f1: 0.7079
+con_loss1: 2.6804, con_loss2: 2.5652, dep_loss: 5.2983, loss: 4.9744, acc: 0.8906, test_acc: 0.8347, f1: 0.7468
+con_loss1: 2.5638, con_loss2: 2.5345, dep_loss: 5.2983, loss: 5.1171, acc: 0.8625, test_acc: 0.8338, f1: 0.7523
+con_loss1: 2.2833, con_loss2: 2.2374, dep_loss: 5.2983, loss: 4.6503, acc: 0.8750, test_acc: 0.8329, f1: 0.7481
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8391_f1_0.7582
+con_loss1: 2.1109, con_loss2: 2.0695, dep_loss: 5.2983, loss: 4.4575, acc: 0.8929, test_acc: 0.8391, f1: 0.7582
+con_loss1: 2.6364, con_loss2: 2.5687, dep_loss: 5.2983, loss: 5.2327, acc: 0.8828, test_acc: 0.8329, f1: 0.7405
+con_loss1: 2.2996, con_loss2: 2.2857, dep_loss: 5.2983, loss: 4.8040, acc: 0.8819, test_acc: 0.8186, f1: 0.7050
+con_loss1: 2.1134, con_loss2: 2.0892, dep_loss: 5.2983, loss: 4.3685, acc: 0.8875, test_acc: 0.8329, f1: 0.7338
+con_loss1: 2.2820, con_loss2: 2.2719, dep_loss: 5.2983, loss: 4.5128, acc: 0.8977, test_acc: 0.8356, f1: 0.7521
+con_loss1: 2.2705, con_loss2: 2.2303, dep_loss: 5.2983, loss: 4.6110, acc: 0.8958, test_acc: 0.8374, f1: 0.7621
+con_loss1: 2.3537, con_loss2: 2.2887, dep_loss: 5.2983, loss: 4.8449, acc: 0.8894, test_acc: 0.8320, f1: 0.7394
+con_loss1: 2.2956, con_loss2: 2.2974, dep_loss: 5.2983, loss: 4.8669, acc: 0.8839, test_acc: 0.8141, f1: 0.7006
+con_loss1: 2.3583, con_loss2: 2.2950, dep_loss: 5.2983, loss: 4.7161, acc: 0.8750, test_acc: 0.8293, f1: 0.7296
+con_loss1: 3.0753, con_loss2: 3.0493, dep_loss: 5.2983, loss: 5.9452, acc: 0.8672, test_acc: 0.8284, f1: 0.7533
+con_loss1: 2.2454, con_loss2: 2.2296, dep_loss: 5.2983, loss: 4.5776, acc: 0.8713, test_acc: 0.8302, f1: 0.7532
+con_loss1: 2.1577, con_loss2: 2.1665, dep_loss: 5.2983, loss: 4.4804, acc: 0.8785, test_acc: 0.8204, f1: 0.7036
+con_loss1: 2.4736, con_loss2: 2.4682, dep_loss: 5.2983, loss: 4.9231, acc: 0.8783, test_acc: 0.8088, f1: 0.6753
+con_loss1: 2.1714, con_loss2: 2.1686, dep_loss: 5.2983, loss: 4.4531, acc: 0.8812, test_acc: 0.8123, f1: 0.6847
+con_loss1: 2.4204, con_loss2: 2.3721, dep_loss: 5.2983, loss: 4.6926, acc: 0.8839, test_acc: 0.8213, f1: 0.7214
+con_loss1: 2.7587, con_loss2: 2.7008, dep_loss: 5.2983, loss: 5.5847, acc: 0.8778, test_acc: 0.8338, f1: 0.7480
+con_loss1: 2.8224, con_loss2: 2.7909, dep_loss: 5.2983, loss: 5.6738, acc: 0.8750, test_acc: 0.8329, f1: 0.7512
+con_loss1: 2.3797, con_loss2: 2.3585, dep_loss: 5.2983, loss: 4.7412, acc: 0.8750, test_acc: 0.8311, f1: 0.7341
+con_loss1: 2.8414, con_loss2: 2.8160, dep_loss: 5.2983, loss: 5.4602, acc: 0.8700, test_acc: 0.8311, f1: 0.7423
+con_loss1: 2.4169, con_loss2: 2.4017, dep_loss: 5.2983, loss: 4.7340, acc: 0.8750, test_acc: 0.8311, f1: 0.7425
+con_loss1: 2.4331, con_loss2: 2.3845, dep_loss: 5.2983, loss: 4.5996, acc: 0.8796, test_acc: 0.8284, f1: 0.7265
+con_loss1: 2.2742, con_loss2: 2.2491, dep_loss: 5.2983, loss: 4.5460, acc: 0.8817, test_acc: 0.8222, f1: 0.7056
+con_loss1: 2.3735, con_loss2: 2.3669, dep_loss: 5.2983, loss: 4.7614, acc: 0.8793, test_acc: 0.8168, f1: 0.6961
+con_loss1: 2.4281, con_loss2: 2.4618, dep_loss: 5.2983, loss: 4.8300, acc: 0.8771, test_acc: 0.8114, f1: 0.6981
+con_loss1: 2.4478, con_loss2: 2.4478, dep_loss: 5.2983, loss: 5.0069, acc: 0.8730, test_acc: 0.8302, f1: 0.7572
+con_loss1: 2.6371, con_loss2: 2.6078, dep_loss: 5.2983, loss: 5.1810, acc: 0.8730, test_acc: 0.8329, f1: 0.7587
+con_loss1: 2.8769, con_loss2: 2.8627, dep_loss: 5.2983, loss: 5.7208, acc: 0.8674, test_acc: 0.8374, f1: 0.7568
+con_loss1: 2.4733, con_loss2: 2.4585, dep_loss: 5.2983, loss: 4.8164, acc: 0.8695, test_acc: 0.8293, f1: 0.7339
+con_loss1: 2.4443, con_loss2: 2.4289, dep_loss: 5.2983, loss: 4.9267, acc: 0.8679, test_acc: 0.8302, f1: 0.7354
+con_loss1: 2.3382, con_loss2: 2.2862, dep_loss: 5.2983, loss: 4.7585, acc: 0.8681, test_acc: 0.8311, f1: 0.7424
+con_loss1: 2.3031, con_loss2: 2.2958, dep_loss: 5.2983, loss: 4.7279, acc: 0.8682, test_acc: 0.8302, f1: 0.7354
+con_loss1: 2.7400, con_loss2: 2.7254, dep_loss: 5.2983, loss: 5.5866, acc: 0.8651, test_acc: 0.8302, f1: 0.7304
+con_loss1: 2.6892, con_loss2: 2.6891, dep_loss: 5.2983, loss: 5.2000, acc: 0.8654, test_acc: 0.8231, f1: 0.7184
+con_loss1: 2.3958, con_loss2: 2.3766, dep_loss: 5.2983, loss: 4.7570, acc: 0.8641, test_acc: 0.8284, f1: 0.7336
+con_loss1: 2.3115, con_loss2: 2.2746, dep_loss: 5.2983, loss: 4.7922, acc: 0.8643, test_acc: 0.8329, f1: 0.7587
+con_loss1: 2.1608, con_loss2: 2.1319, dep_loss: 5.2983, loss: 4.4094, acc: 0.8676, test_acc: 0.8329, f1: 0.7593
+con_loss1: 2.7240, con_loss2: 2.7198, dep_loss: 5.2983, loss: 5.3319, acc: 0.8648, test_acc: 0.8061, f1: 0.6972
+con_loss1: 2.8890, con_loss2: 2.7962, dep_loss: 5.2983, loss: 5.8848, acc: 0.8594, test_acc: 0.8302, f1: 0.7420
+con_loss1: 2.6518, con_loss2: 2.6413, dep_loss: 5.2983, loss: 5.3035, acc: 0.8583, test_acc: 0.8391, f1: 0.7553
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 4
+con_loss1: 2.2620, con_loss2: 2.2414, dep_loss: 5.2983, loss: 4.5961, acc: 0.9375, test_acc: 0.8365, f1: 0.7507
+con_loss1: 2.3905, con_loss2: 2.3886, dep_loss: 5.2983, loss: 4.9029, acc: 0.8750, test_acc: 0.8347, f1: 0.7495
+con_loss1: 2.5931, con_loss2: 2.5445, dep_loss: 5.2983, loss: 4.9753, acc: 0.8750, test_acc: 0.8293, f1: 0.7387
+con_loss1: 2.5450, con_loss2: 2.4647, dep_loss: 5.2983, loss: 4.8417, acc: 0.8750, test_acc: 0.8070, f1: 0.6891
+con_loss1: 2.6477, con_loss2: 2.6063, dep_loss: 5.2983, loss: 5.2602, acc: 0.8750, test_acc: 0.8097, f1: 0.6857
+con_loss1: 2.4846, con_loss2: 2.4393, dep_loss: 5.2983, loss: 4.9940, acc: 0.8750, test_acc: 0.8248, f1: 0.7147
+con_loss1: 2.3797, con_loss2: 2.3593, dep_loss: 5.2983, loss: 4.6912, acc: 0.8750, test_acc: 0.8374, f1: 0.7581
+con_loss1: 2.7297, con_loss2: 2.7935, dep_loss: 5.2983, loss: 5.3182, acc: 0.8750, test_acc: 0.8391, f1: 0.7697
+con_loss1: 2.6452, con_loss2: 2.6445, dep_loss: 5.2983, loss: 5.0293, acc: 0.8750, test_acc: 0.8356, f1: 0.7586
+con_loss1: 2.7653, con_loss2: 2.7185, dep_loss: 5.2983, loss: 5.1113, acc: 0.8750, test_acc: 0.8338, f1: 0.7482
+con_loss1: 2.1545, con_loss2: 2.1266, dep_loss: 5.2983, loss: 4.3035, acc: 0.8864, test_acc: 0.8320, f1: 0.7446
+con_loss1: 2.2743, con_loss2: 2.2526, dep_loss: 5.2983, loss: 4.5997, acc: 0.8906, test_acc: 0.8356, f1: 0.7515
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8418_f1_0.7623
+con_loss1: 2.2514, con_loss2: 2.2501, dep_loss: 5.2983, loss: 4.5355, acc: 0.8942, test_acc: 0.8418, f1: 0.7623
+con_loss1: 2.0918, con_loss2: 2.0754, dep_loss: 5.2983, loss: 4.3164, acc: 0.8973, test_acc: 0.8382, f1: 0.7562
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8436_f1_0.7820
+con_loss1: 2.2646, con_loss2: 2.1956, dep_loss: 5.2983, loss: 4.8420, acc: 0.8875, test_acc: 0.8436, f1: 0.7820
+con_loss1: 2.1442, con_loss2: 2.1291, dep_loss: 5.2983, loss: 4.4469, acc: 0.8906, test_acc: 0.8409, f1: 0.7658
+con_loss1: 2.2985, con_loss2: 2.2271, dep_loss: 5.2983, loss: 4.5374, acc: 0.8934, test_acc: 0.8338, f1: 0.7445
+con_loss1: 2.5148, con_loss2: 2.5131, dep_loss: 5.2983, loss: 4.9483, acc: 0.8924, test_acc: 0.8356, f1: 0.7471
+con_loss1: 2.1608, con_loss2: 2.1341, dep_loss: 5.2983, loss: 4.3422, acc: 0.8980, test_acc: 0.8374, f1: 0.7528
+con_loss1: 2.2964, con_loss2: 2.2505, dep_loss: 5.2983, loss: 4.4865, acc: 0.9000, test_acc: 0.8400, f1: 0.7577
+con_loss1: 2.3122, con_loss2: 2.3073, dep_loss: 5.2983, loss: 4.6354, acc: 0.8988, test_acc: 0.8436, f1: 0.7616
+con_loss1: 2.1648, con_loss2: 2.1357, dep_loss: 5.2983, loss: 4.3719, acc: 0.9006, test_acc: 0.8391, f1: 0.7583
+con_loss1: 2.7292, con_loss2: 2.6976, dep_loss: 5.2983, loss: 5.5013, acc: 0.8967, test_acc: 0.8356, f1: 0.7477
+con_loss1: 2.2178, con_loss2: 2.1981, dep_loss: 5.2983, loss: 4.3809, acc: 0.9010, test_acc: 0.8391, f1: 0.7552
+con_loss1: 2.0522, con_loss2: 2.0356, dep_loss: 5.2983, loss: 4.2860, acc: 0.9025, test_acc: 0.8338, f1: 0.7457
+con_loss1: 1.9727, con_loss2: 1.9615, dep_loss: 5.2983, loss: 4.2278, acc: 0.9038, test_acc: 0.8374, f1: 0.7542
+con_loss1: 2.0506, con_loss2: 2.0453, dep_loss: 5.2983, loss: 4.3272, acc: 0.9051, test_acc: 0.8347, f1: 0.7602
+con_loss1: 1.9159, con_loss2: 1.9090, dep_loss: 5.2983, loss: 4.0918, acc: 0.9085, test_acc: 0.8409, f1: 0.7696
+con_loss1: 2.1557, con_loss2: 2.1384, dep_loss: 5.2983, loss: 4.3073, acc: 0.9116, test_acc: 0.8409, f1: 0.7623
+con_loss1: 2.1067, con_loss2: 2.0817, dep_loss: 5.2983, loss: 4.3271, acc: 0.9125, test_acc: 0.8347, f1: 0.7503
+con_loss1: 2.2325, con_loss2: 2.2291, dep_loss: 5.2983, loss: 4.3808, acc: 0.9153, test_acc: 0.8347, f1: 0.7515
+con_loss1: 2.3695, con_loss2: 2.3410, dep_loss: 5.2983, loss: 4.9634, acc: 0.9121, test_acc: 0.8391, f1: 0.7614
+con_loss1: 2.2444, con_loss2: 2.2373, dep_loss: 5.2983, loss: 4.5563, acc: 0.9129, test_acc: 0.8347, f1: 0.7566
+con_loss1: 2.9552, con_loss2: 2.9641, dep_loss: 5.2983, loss: 5.8055, acc: 0.9099, test_acc: 0.8374, f1: 0.7635
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8463_f1_0.7765
+con_loss1: 2.0707, con_loss2: 2.0225, dep_loss: 5.2983, loss: 4.2394, acc: 0.9125, test_acc: 0.8463, f1: 0.7765
+con_loss1: 1.9980, con_loss2: 1.9866, dep_loss: 5.2983, loss: 4.1962, acc: 0.9149, test_acc: 0.8365, f1: 0.7562
+con_loss1: 2.3367, con_loss2: 2.3144, dep_loss: 5.2983, loss: 4.7336, acc: 0.9155, test_acc: 0.8347, f1: 0.7506
+con_loss1: 2.4914, con_loss2: 2.4344, dep_loss: 5.2983, loss: 4.6156, acc: 0.9178, test_acc: 0.8275, f1: 0.7270
+con_loss1: 3.0185, con_loss2: 2.9939, dep_loss: 5.2983, loss: 5.4542, acc: 0.9183, test_acc: 0.8365, f1: 0.7480
+con_loss1: 2.4064, con_loss2: 2.4076, dep_loss: 5.2983, loss: 4.7224, acc: 0.9172, test_acc: 0.8293, f1: 0.7564
+con_loss1: 1.9909, con_loss2: 2.0176, dep_loss: 5.2983, loss: 4.2095, acc: 0.9192, test_acc: 0.8347, f1: 0.7593
+con_loss1: 2.0485, con_loss2: 2.0261, dep_loss: 5.2983, loss: 4.2599, acc: 0.9196, test_acc: 0.8347, f1: 0.7488
+con_loss1: 2.1003, con_loss2: 2.0809, dep_loss: 5.2983, loss: 4.2981, acc: 0.9215, test_acc: 0.8347, f1: 0.7417
+con_loss1: 2.2989, con_loss2: 2.2795, dep_loss: 5.2983, loss: 4.9146, acc: 0.9190, test_acc: 0.8365, f1: 0.7383
+con_loss1: 1.9723, con_loss2: 1.9382, dep_loss: 5.2983, loss: 4.1025, acc: 0.9208, test_acc: 0.8338, f1: 0.7397
+con_loss1: 1.4035, con_loss2: 1.3882, dep_loss: 5.2983, loss: 3.5806, acc: 0.9217, test_acc: 0.8356, f1: 0.7553
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 5
+con_loss1: 1.9465, con_loss2: 1.9316, dep_loss: 5.2983, loss: 4.1361, acc: 1.0000, test_acc: 0.8311, f1: 0.7575
+con_loss1: 2.5438, con_loss2: 2.4846, dep_loss: 5.2983, loss: 4.9443, acc: 0.9688, test_acc: 0.8329, f1: 0.7407
+con_loss1: 2.1529, con_loss2: 2.1122, dep_loss: 5.2983, loss: 4.2761, acc: 0.9792, test_acc: 0.8284, f1: 0.7193
+con_loss1: 2.2032, con_loss2: 2.1853, dep_loss: 5.2983, loss: 4.3651, acc: 0.9844, test_acc: 0.8356, f1: 0.7464
+con_loss1: 2.0138, con_loss2: 1.9908, dep_loss: 5.2983, loss: 4.3691, acc: 0.9750, test_acc: 0.8311, f1: 0.7523
+con_loss1: 1.9749, con_loss2: 1.9493, dep_loss: 5.2983, loss: 4.1862, acc: 0.9688, test_acc: 0.8382, f1: 0.7732
+con_loss1: 2.1048, con_loss2: 2.0790, dep_loss: 5.2983, loss: 4.2472, acc: 0.9732, test_acc: 0.8365, f1: 0.7645
+con_loss1: 1.9620, con_loss2: 1.9443, dep_loss: 5.2983, loss: 4.1263, acc: 0.9766, test_acc: 0.8382, f1: 0.7592
+con_loss1: 1.8597, con_loss2: 1.8555, dep_loss: 5.2983, loss: 4.0409, acc: 0.9792, test_acc: 0.8365, f1: 0.7488
+con_loss1: 2.8642, con_loss2: 2.7729, dep_loss: 5.2983, loss: 4.9505, acc: 0.9812, test_acc: 0.8365, f1: 0.7434
+con_loss1: 1.9806, con_loss2: 1.9419, dep_loss: 5.2983, loss: 4.1048, acc: 0.9830, test_acc: 0.8400, f1: 0.7468
+con_loss1: 2.2555, con_loss2: 2.2530, dep_loss: 5.2983, loss: 4.5298, acc: 0.9792, test_acc: 0.8382, f1: 0.7458
+con_loss1: 1.9772, con_loss2: 1.9758, dep_loss: 5.2983, loss: 4.1345, acc: 0.9808, test_acc: 0.8391, f1: 0.7652
+con_loss1: 2.1642, con_loss2: 2.1434, dep_loss: 5.2983, loss: 4.3219, acc: 0.9821, test_acc: 0.8418, f1: 0.7593
+con_loss1: 2.3538, con_loss2: 2.3372, dep_loss: 5.2983, loss: 4.5142, acc: 0.9833, test_acc: 0.8347, f1: 0.7458
+con_loss1: 1.8935, con_loss2: 1.8758, dep_loss: 5.2983, loss: 4.1163, acc: 0.9844, test_acc: 0.8391, f1: 0.7575
+con_loss1: 2.2756, con_loss2: 2.2489, dep_loss: 5.2983, loss: 4.4889, acc: 0.9816, test_acc: 0.8347, f1: 0.7591
+con_loss1: 2.6402, con_loss2: 2.6367, dep_loss: 5.2983, loss: 5.2650, acc: 0.9792, test_acc: 0.8409, f1: 0.7566
+con_loss1: 1.9331, con_loss2: 1.9132, dep_loss: 5.2983, loss: 4.1460, acc: 0.9770, test_acc: 0.8436, f1: 0.7612
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8499_f1_0.7713
+con_loss1: 2.0076, con_loss2: 1.9799, dep_loss: 5.2983, loss: 4.1767, acc: 0.9781, test_acc: 0.8499, f1: 0.7713
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8525_f1_0.7721
+con_loss1: 2.0283, con_loss2: 2.0092, dep_loss: 5.2983, loss: 4.3756, acc: 0.9762, test_acc: 0.8525, f1: 0.7721
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8570_f1_0.7825
+con_loss1: 2.4907, con_loss2: 2.4582, dep_loss: 5.2983, loss: 5.0585, acc: 0.9688, test_acc: 0.8570, f1: 0.7825
+con_loss1: 2.1286, con_loss2: 2.1340, dep_loss: 5.2983, loss: 4.3625, acc: 0.9674, test_acc: 0.8490, f1: 0.7692
+con_loss1: 2.4089, con_loss2: 2.3847, dep_loss: 5.2983, loss: 4.5329, acc: 0.9688, test_acc: 0.8302, f1: 0.7358
+con_loss1: 2.0135, con_loss2: 1.9974, dep_loss: 5.2983, loss: 4.2168, acc: 0.9700, test_acc: 0.8257, f1: 0.7271
+con_loss1: 2.5676, con_loss2: 2.5375, dep_loss: 5.2983, loss: 5.0068, acc: 0.9663, test_acc: 0.8338, f1: 0.7414
+con_loss1: 2.1902, con_loss2: 2.1569, dep_loss: 5.2983, loss: 4.4741, acc: 0.9653, test_acc: 0.8418, f1: 0.7536
+con_loss1: 1.9578, con_loss2: 1.9332, dep_loss: 5.2983, loss: 4.1061, acc: 0.9665, test_acc: 0.8463, f1: 0.7607
+con_loss1: 1.9690, con_loss2: 1.9691, dep_loss: 5.2983, loss: 4.1652, acc: 0.9655, test_acc: 0.8427, f1: 0.7579
+con_loss1: 2.0638, con_loss2: 2.0143, dep_loss: 5.2983, loss: 4.2633, acc: 0.9646, test_acc: 0.8436, f1: 0.7636
+con_loss1: 2.0148, con_loss2: 2.0177, dep_loss: 5.2983, loss: 4.1809, acc: 0.9657, test_acc: 0.8445, f1: 0.7882
+con_loss1: 2.7810, con_loss2: 2.7063, dep_loss: 5.2983, loss: 5.1376, acc: 0.9629, test_acc: 0.8391, f1: 0.7643
+con_loss1: 2.9368, con_loss2: 2.8740, dep_loss: 5.2983, loss: 5.8016, acc: 0.9602, test_acc: 0.8427, f1: 0.7614
+con_loss1: 2.0810, con_loss2: 2.0691, dep_loss: 5.2983, loss: 4.3720, acc: 0.9577, test_acc: 0.8499, f1: 0.7754
+con_loss1: 2.0239, con_loss2: 2.0067, dep_loss: 5.2983, loss: 4.2221, acc: 0.9589, test_acc: 0.8481, f1: 0.7840
+con_loss1: 2.0832, con_loss2: 2.0115, dep_loss: 5.2983, loss: 4.2486, acc: 0.9583, test_acc: 0.8534, f1: 0.7811
+con_loss1: 2.2392, con_loss2: 2.2287, dep_loss: 5.2983, loss: 4.7282, acc: 0.9561, test_acc: 0.8463, f1: 0.7671
+con_loss1: 2.0758, con_loss2: 2.0592, dep_loss: 5.2983, loss: 4.2672, acc: 0.9556, test_acc: 0.8454, f1: 0.7781
+con_loss1: 1.8544, con_loss2: 1.8363, dep_loss: 5.2983, loss: 4.0163, acc: 0.9567, test_acc: 0.8490, f1: 0.7788
+con_loss1: 1.9092, con_loss2: 1.8898, dep_loss: 5.2983, loss: 4.0951, acc: 0.9563, test_acc: 0.8490, f1: 0.7778
+con_loss1: 1.8967, con_loss2: 1.8379, dep_loss: 5.2983, loss: 4.0109, acc: 0.9573, test_acc: 0.8517, f1: 0.7804
+con_loss1: 2.1186, con_loss2: 2.1165, dep_loss: 5.2983, loss: 4.4145, acc: 0.9568, test_acc: 0.8481, f1: 0.7810
+con_loss1: 2.0671, con_loss2: 2.0683, dep_loss: 5.2983, loss: 4.4048, acc: 0.9564, test_acc: 0.8427, f1: 0.7632
+con_loss1: 2.1775, con_loss2: 2.1527, dep_loss: 5.2983, loss: 4.4767, acc: 0.9560, test_acc: 0.8525, f1: 0.7805
+con_loss1: 2.2508, con_loss2: 2.2498, dep_loss: 5.2983, loss: 4.5528, acc: 0.9556, test_acc: 0.8508, f1: 0.7821
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 6
+con_loss1: 1.7959, con_loss2: 1.7784, dep_loss: 5.2983, loss: 3.9394, acc: 1.0000, test_acc: 0.8508, f1: 0.7746
+con_loss1: 2.0636, con_loss2: 2.0702, dep_loss: 5.2983, loss: 4.2547, acc: 0.9688, test_acc: 0.8490, f1: 0.7686
+con_loss1: 2.1344, con_loss2: 2.1092, dep_loss: 5.2983, loss: 4.4008, acc: 0.9583, test_acc: 0.8517, f1: 0.7784
+con_loss1: 2.3731, con_loss2: 2.4022, dep_loss: 5.2983, loss: 4.5166, acc: 0.9688, test_acc: 0.8517, f1: 0.7821
+con_loss1: 2.2140, con_loss2: 2.1982, dep_loss: 5.2983, loss: 4.5671, acc: 0.9625, test_acc: 0.8525, f1: 0.7824
+con_loss1: 2.2572, con_loss2: 2.2490, dep_loss: 5.2983, loss: 4.5215, acc: 0.9583, test_acc: 0.8543, f1: 0.7855
+con_loss1: 1.9619, con_loss2: 1.9259, dep_loss: 5.2983, loss: 4.1940, acc: 0.9554, test_acc: 0.8463, f1: 0.7644
+con_loss1: 1.9261, con_loss2: 1.9170, dep_loss: 5.2983, loss: 4.1329, acc: 0.9531, test_acc: 0.8463, f1: 0.7666
+con_loss1: 1.7879, con_loss2: 1.7813, dep_loss: 5.2983, loss: 3.9327, acc: 0.9583, test_acc: 0.8525, f1: 0.7875
+con_loss1: 2.2589, con_loss2: 2.2321, dep_loss: 5.2983, loss: 4.6110, acc: 0.9563, test_acc: 0.8534, f1: 0.7890
+con_loss1: 1.8032, con_loss2: 1.7891, dep_loss: 5.2983, loss: 3.9402, acc: 0.9602, test_acc: 0.8534, f1: 0.7902
+con_loss1: 2.1214, con_loss2: 2.0788, dep_loss: 5.2983, loss: 4.2928, acc: 0.9583, test_acc: 0.8463, f1: 0.7693
+con_loss1: 2.8983, con_loss2: 2.8924, dep_loss: 5.2983, loss: 5.4368, acc: 0.9567, test_acc: 0.8400, f1: 0.7562
+con_loss1: 1.7361, con_loss2: 1.7351, dep_loss: 5.2983, loss: 3.8759, acc: 0.9598, test_acc: 0.8508, f1: 0.7762
+con_loss1: 1.9193, con_loss2: 1.8942, dep_loss: 5.2983, loss: 4.0394, acc: 0.9625, test_acc: 0.8472, f1: 0.7785
+con_loss1: 1.9283, con_loss2: 1.9048, dep_loss: 5.2983, loss: 4.0748, acc: 0.9648, test_acc: 0.8418, f1: 0.7762
+con_loss1: 2.2756, con_loss2: 2.2392, dep_loss: 5.2983, loss: 4.6545, acc: 0.9596, test_acc: 0.8409, f1: 0.7688
+con_loss1: 1.8977, con_loss2: 1.8696, dep_loss: 5.2983, loss: 4.0392, acc: 0.9618, test_acc: 0.8374, f1: 0.7549
+con_loss1: 2.1045, con_loss2: 2.0853, dep_loss: 5.2983, loss: 4.2663, acc: 0.9638, test_acc: 0.8320, f1: 0.7455
+con_loss1: 2.0500, con_loss2: 1.9849, dep_loss: 5.2983, loss: 4.2799, acc: 0.9625, test_acc: 0.8391, f1: 0.7542
+con_loss1: 2.1907, con_loss2: 2.1963, dep_loss: 5.2983, loss: 4.5546, acc: 0.9583, test_acc: 0.8436, f1: 0.7685
+con_loss1: 1.9523, con_loss2: 1.9149, dep_loss: 5.2983, loss: 4.0925, acc: 0.9602, test_acc: 0.8472, f1: 0.7826
+con_loss1: 2.4287, con_loss2: 2.4128, dep_loss: 5.2983, loss: 4.9136, acc: 0.9565, test_acc: 0.8499, f1: 0.7896
+con_loss1: 2.1144, con_loss2: 2.0938, dep_loss: 5.2983, loss: 4.3247, acc: 0.9557, test_acc: 0.8472, f1: 0.7739
+con_loss1: 2.3149, con_loss2: 2.2974, dep_loss: 5.2983, loss: 4.6033, acc: 0.9550, test_acc: 0.8311, f1: 0.7343
+con_loss1: 2.1671, con_loss2: 2.1483, dep_loss: 5.2983, loss: 4.4632, acc: 0.9543, test_acc: 0.8347, f1: 0.7427
+con_loss1: 2.0451, con_loss2: 2.0367, dep_loss: 5.2983, loss: 4.2811, acc: 0.9537, test_acc: 0.8356, f1: 0.7451
+con_loss1: 2.1559, con_loss2: 2.1436, dep_loss: 5.2983, loss: 4.2794, acc: 0.9554, test_acc: 0.8391, f1: 0.7442
+con_loss1: 2.0759, con_loss2: 2.0569, dep_loss: 5.2983, loss: 4.2419, acc: 0.9569, test_acc: 0.8445, f1: 0.7510
+con_loss1: 2.2096, con_loss2: 2.2004, dep_loss: 5.2983, loss: 4.4493, acc: 0.9563, test_acc: 0.8543, f1: 0.7885
+con_loss1: 1.9902, con_loss2: 1.9847, dep_loss: 5.2983, loss: 4.1237, acc: 0.9577, test_acc: 0.8427, f1: 0.7820
+con_loss1: 2.0458, con_loss2: 2.0436, dep_loss: 5.2983, loss: 4.2232, acc: 0.9590, test_acc: 0.8534, f1: 0.7899
+con_loss1: 2.2924, con_loss2: 2.2923, dep_loss: 5.2983, loss: 4.7483, acc: 0.9564, test_acc: 0.8436, f1: 0.7636
+con_loss1: 1.9721, con_loss2: 1.9533, dep_loss: 5.2983, loss: 4.0934, acc: 0.9577, test_acc: 0.8391, f1: 0.7537
+con_loss1: 2.3405, con_loss2: 2.2976, dep_loss: 5.2983, loss: 4.6880, acc: 0.9554, test_acc: 0.8391, f1: 0.7545
+con_loss1: 1.9988, con_loss2: 1.9836, dep_loss: 5.2983, loss: 4.1576, acc: 0.9566, test_acc: 0.8445, f1: 0.7663
+con_loss1: 2.0162, con_loss2: 1.9905, dep_loss: 5.2983, loss: 4.1780, acc: 0.9578, test_acc: 0.8427, f1: 0.7637
+con_loss1: 2.0808, con_loss2: 2.0929, dep_loss: 5.2983, loss: 4.2431, acc: 0.9589, test_acc: 0.8400, f1: 0.7560
+con_loss1: 1.9716, con_loss2: 2.0141, dep_loss: 5.2983, loss: 4.1591, acc: 0.9599, test_acc: 0.8311, f1: 0.7322
+con_loss1: 2.0301, con_loss2: 2.0358, dep_loss: 5.2983, loss: 4.1749, acc: 0.9609, test_acc: 0.8472, f1: 0.7655
+con_loss1: 2.1099, con_loss2: 2.1041, dep_loss: 5.2983, loss: 4.2907, acc: 0.9619, test_acc: 0.8561, f1: 0.7841
+con_loss1: 2.1555, con_loss2: 2.1326, dep_loss: 5.2983, loss: 4.4769, acc: 0.9613, test_acc: 0.8454, f1: 0.7662
+con_loss1: 2.4020, con_loss2: 2.3984, dep_loss: 5.2983, loss: 4.8545, acc: 0.9608, test_acc: 0.8391, f1: 0.7566
+con_loss1: 1.7579, con_loss2: 1.7531, dep_loss: 5.2983, loss: 3.9097, acc: 0.9616, test_acc: 0.8391, f1: 0.7571
+con_loss1: 2.0975, con_loss2: 2.1030, dep_loss: 5.2983, loss: 4.2671, acc: 0.9625, test_acc: 0.8382, f1: 0.7585
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 7
+con_loss1: 2.1662, con_loss2: 2.1475, dep_loss: 5.2983, loss: 4.4143, acc: 0.9375, test_acc: 0.8400, f1: 0.7687
+con_loss1: 1.9787, con_loss2: 1.9831, dep_loss: 5.2983, loss: 4.1158, acc: 0.9688, test_acc: 0.8409, f1: 0.7737
+con_loss1: 2.0734, con_loss2: 2.0352, dep_loss: 5.2983, loss: 4.2102, acc: 0.9792, test_acc: 0.8409, f1: 0.7718
+con_loss1: 1.9222, con_loss2: 1.8979, dep_loss: 5.2983, loss: 4.1832, acc: 0.9688, test_acc: 0.8391, f1: 0.7645
+con_loss1: 2.0545, con_loss2: 2.0349, dep_loss: 5.2983, loss: 4.3161, acc: 0.9625, test_acc: 0.8374, f1: 0.7506
+con_loss1: 1.9669, con_loss2: 1.9042, dep_loss: 5.2983, loss: 4.1263, acc: 0.9583, test_acc: 0.8338, f1: 0.7450
+con_loss1: 1.8219, con_loss2: 1.8110, dep_loss: 5.2983, loss: 3.9507, acc: 0.9643, test_acc: 0.8365, f1: 0.7586
+con_loss1: 1.8293, con_loss2: 1.8422, dep_loss: 5.2983, loss: 4.0405, acc: 0.9688, test_acc: 0.8311, f1: 0.7516
+con_loss1: 1.7841, con_loss2: 1.7686, dep_loss: 5.2983, loss: 3.9609, acc: 0.9653, test_acc: 0.8320, f1: 0.7495
+con_loss1: 1.9648, con_loss2: 1.8732, dep_loss: 5.2983, loss: 4.0662, acc: 0.9688, test_acc: 0.8347, f1: 0.7510
+con_loss1: 1.7966, con_loss2: 1.7761, dep_loss: 5.2983, loss: 3.9255, acc: 0.9716, test_acc: 0.8418, f1: 0.7683
+con_loss1: 1.9683, con_loss2: 1.9674, dep_loss: 5.2983, loss: 4.1478, acc: 0.9740, test_acc: 0.8427, f1: 0.7713
+con_loss1: 2.1037, con_loss2: 2.0916, dep_loss: 5.2983, loss: 4.4059, acc: 0.9712, test_acc: 0.8427, f1: 0.7690
+con_loss1: 1.9185, con_loss2: 1.9319, dep_loss: 5.2983, loss: 4.0880, acc: 0.9732, test_acc: 0.8374, f1: 0.7641
+con_loss1: 1.9013, con_loss2: 1.8781, dep_loss: 5.2983, loss: 4.0198, acc: 0.9750, test_acc: 0.8391, f1: 0.7703
+con_loss1: 1.7591, con_loss2: 1.7504, dep_loss: 5.2983, loss: 3.8890, acc: 0.9766, test_acc: 0.8374, f1: 0.7695
+con_loss1: 2.5224, con_loss2: 2.5166, dep_loss: 5.2983, loss: 5.0864, acc: 0.9706, test_acc: 0.8374, f1: 0.7615
+con_loss1: 1.8433, con_loss2: 1.8188, dep_loss: 5.2983, loss: 3.9726, acc: 0.9722, test_acc: 0.8391, f1: 0.7491
+con_loss1: 2.0159, con_loss2: 2.0170, dep_loss: 5.2983, loss: 4.2027, acc: 0.9737, test_acc: 0.8356, f1: 0.7448
+con_loss1: 1.7693, con_loss2: 1.7772, dep_loss: 5.2983, loss: 3.9068, acc: 0.9750, test_acc: 0.8374, f1: 0.7471
+con_loss1: 1.9201, con_loss2: 1.9140, dep_loss: 5.2983, loss: 4.0465, acc: 0.9762, test_acc: 0.8356, f1: 0.7465
+con_loss1: 2.2971, con_loss2: 2.2964, dep_loss: 5.2983, loss: 4.6501, acc: 0.9744, test_acc: 0.8293, f1: 0.7392
+con_loss1: 2.0385, con_loss2: 1.9916, dep_loss: 5.2983, loss: 4.2109, acc: 0.9755, test_acc: 0.8266, f1: 0.7464
+con_loss1: 2.4971, con_loss2: 2.4530, dep_loss: 5.2983, loss: 4.6903, acc: 0.9740, test_acc: 0.8275, f1: 0.7527
+con_loss1: 1.8664, con_loss2: 1.8403, dep_loss: 5.2983, loss: 3.9902, acc: 0.9750, test_acc: 0.8400, f1: 0.7644
+con_loss1: 1.9332, con_loss2: 1.9304, dep_loss: 5.2983, loss: 4.1203, acc: 0.9760, test_acc: 0.8463, f1: 0.7666
+con_loss1: 1.9236, con_loss2: 1.9236, dep_loss: 5.2983, loss: 4.0564, acc: 0.9769, test_acc: 0.8329, f1: 0.7404
+con_loss1: 1.9486, con_loss2: 1.9193, dep_loss: 5.2983, loss: 4.0657, acc: 0.9777, test_acc: 0.8427, f1: 0.7542
+con_loss1: 1.7929, con_loss2: 1.7837, dep_loss: 5.2983, loss: 3.9190, acc: 0.9784, test_acc: 0.8418, f1: 0.7500
+con_loss1: 1.9793, con_loss2: 1.9823, dep_loss: 5.2983, loss: 4.1626, acc: 0.9792, test_acc: 0.8222, f1: 0.7197
+con_loss1: 1.9220, con_loss2: 1.9154, dep_loss: 5.2983, loss: 4.0467, acc: 0.9798, test_acc: 0.8114, f1: 0.7023
+con_loss1: 1.9729, con_loss2: 1.9224, dep_loss: 5.2983, loss: 4.2129, acc: 0.9766, test_acc: 0.8177, f1: 0.7133
+con_loss1: 1.9849, con_loss2: 1.9632, dep_loss: 5.2983, loss: 4.1365, acc: 0.9773, test_acc: 0.8463, f1: 0.7814
+con_loss1: 2.4372, con_loss2: 2.3868, dep_loss: 5.2983, loss: 4.5954, acc: 0.9779, test_acc: 0.8454, f1: 0.7837
+con_loss1: 1.9432, con_loss2: 1.9047, dep_loss: 5.2983, loss: 4.0662, acc: 0.9786, test_acc: 0.8445, f1: 0.7703
+con_loss1: 2.0479, con_loss2: 1.9987, dep_loss: 5.2983, loss: 4.3192, acc: 0.9774, test_acc: 0.8499, f1: 0.7794
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8579_f1_0.7986
+con_loss1: 1.8181, con_loss2: 1.8391, dep_loss: 5.2983, loss: 3.9710, acc: 0.9780, test_acc: 0.8579, f1: 0.7986
+con_loss1: 1.7729, con_loss2: 1.7484, dep_loss: 5.2983, loss: 3.8974, acc: 0.9786, test_acc: 0.8543, f1: 0.7941
+con_loss1: 1.8277, con_loss2: 1.8217, dep_loss: 5.2983, loss: 3.9856, acc: 0.9792, test_acc: 0.8552, f1: 0.7947
+con_loss1: 2.1422, con_loss2: 2.0928, dep_loss: 5.2983, loss: 4.4864, acc: 0.9781, test_acc: 0.8534, f1: 0.7861
+con_loss1: 1.9802, con_loss2: 1.9855, dep_loss: 5.2983, loss: 4.1470, acc: 0.9787, test_acc: 0.8508, f1: 0.7794
+con_loss1: 2.3698, con_loss2: 2.3543, dep_loss: 5.2983, loss: 4.6950, acc: 0.9777, test_acc: 0.8481, f1: 0.7704
+con_loss1: 1.7779, con_loss2: 1.7574, dep_loss: 5.2983, loss: 3.9230, acc: 0.9782, test_acc: 0.8445, f1: 0.7718
+con_loss1: 1.8215, con_loss2: 1.7971, dep_loss: 5.2983, loss: 3.9384, acc: 0.9787, test_acc: 0.8454, f1: 0.7722
+con_loss1: 2.4604, con_loss2: 2.4396, dep_loss: 5.2983, loss: 5.0017, acc: 0.9778, test_acc: 0.8481, f1: 0.7808
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 8
+con_loss1: 2.1425, con_loss2: 2.1617, dep_loss: 5.2983, loss: 4.3663, acc: 1.0000, test_acc: 0.8338, f1: 0.7513
+con_loss1: 2.0130, con_loss2: 2.0247, dep_loss: 5.2983, loss: 4.1519, acc: 1.0000, test_acc: 0.8365, f1: 0.7511
+con_loss1: 2.1376, con_loss2: 2.1413, dep_loss: 5.2983, loss: 4.3304, acc: 0.9792, test_acc: 0.8365, f1: 0.7520
+con_loss1: 1.7617, con_loss2: 1.7388, dep_loss: 5.2983, loss: 3.8823, acc: 0.9844, test_acc: 0.8374, f1: 0.7576
+con_loss1: 1.8616, con_loss2: 1.8058, dep_loss: 5.2983, loss: 3.9812, acc: 0.9875, test_acc: 0.8418, f1: 0.7662
+con_loss1: 1.8903, con_loss2: 1.8792, dep_loss: 5.2983, loss: 4.0111, acc: 0.9896, test_acc: 0.8463, f1: 0.7778
+con_loss1: 1.9525, con_loss2: 1.8994, dep_loss: 5.2983, loss: 4.0555, acc: 0.9911, test_acc: 0.8499, f1: 0.7855
+con_loss1: 2.3229, con_loss2: 2.3133, dep_loss: 5.2983, loss: 4.4441, acc: 0.9922, test_acc: 0.8525, f1: 0.7866
+con_loss1: 1.8040, con_loss2: 1.7528, dep_loss: 5.2983, loss: 3.9521, acc: 0.9861, test_acc: 0.8525, f1: 0.7827
+con_loss1: 2.0617, con_loss2: 2.0434, dep_loss: 5.2983, loss: 4.1830, acc: 0.9875, test_acc: 0.8508, f1: 0.7745
+con_loss1: 1.7953, con_loss2: 1.7672, dep_loss: 5.2983, loss: 3.9091, acc: 0.9886, test_acc: 0.8463, f1: 0.7612
+con_loss1: 1.9960, con_loss2: 1.9930, dep_loss: 5.2983, loss: 4.2031, acc: 0.9844, test_acc: 0.8391, f1: 0.7486
+con_loss1: 1.7023, con_loss2: 1.7093, dep_loss: 5.2983, loss: 3.8422, acc: 0.9856, test_acc: 0.8338, f1: 0.7408
+con_loss1: 1.7911, con_loss2: 1.7742, dep_loss: 5.2983, loss: 3.9135, acc: 0.9866, test_acc: 0.8356, f1: 0.7449
+con_loss1: 1.7832, con_loss2: 1.7482, dep_loss: 5.2983, loss: 3.8928, acc: 0.9875, test_acc: 0.8418, f1: 0.7588
+con_loss1: 1.9711, con_loss2: 1.9606, dep_loss: 5.2983, loss: 4.0921, acc: 0.9883, test_acc: 0.8445, f1: 0.7659
+con_loss1: 1.8460, con_loss2: 1.8047, dep_loss: 5.2983, loss: 3.9809, acc: 0.9890, test_acc: 0.8445, f1: 0.7710
+con_loss1: 2.1471, con_loss2: 2.0905, dep_loss: 5.2983, loss: 4.3086, acc: 0.9861, test_acc: 0.8427, f1: 0.7626
+con_loss1: 1.8601, con_loss2: 1.8306, dep_loss: 5.2983, loss: 3.9856, acc: 0.9868, test_acc: 0.8400, f1: 0.7478
+con_loss1: 2.0274, con_loss2: 2.0194, dep_loss: 5.2983, loss: 4.1929, acc: 0.9875, test_acc: 0.8400, f1: 0.7489
+con_loss1: 1.8257, con_loss2: 1.8252, dep_loss: 5.2983, loss: 3.9574, acc: 0.9881, test_acc: 0.8454, f1: 0.7672
+con_loss1: 2.5222, con_loss2: 2.5444, dep_loss: 5.2983, loss: 4.7972, acc: 0.9858, test_acc: 0.8481, f1: 0.7745
+con_loss1: 1.9778, con_loss2: 1.9357, dep_loss: 5.2983, loss: 4.0987, acc: 0.9864, test_acc: 0.8463, f1: 0.7721
+con_loss1: 1.9702, con_loss2: 1.9243, dep_loss: 5.2983, loss: 4.0776, acc: 0.9870, test_acc: 0.8517, f1: 0.7830
+con_loss1: 1.8300, con_loss2: 1.8262, dep_loss: 5.2983, loss: 3.9524, acc: 0.9875, test_acc: 0.8490, f1: 0.7801
+con_loss1: 1.7175, con_loss2: 1.7180, dep_loss: 5.2983, loss: 3.8458, acc: 0.9880, test_acc: 0.8454, f1: 0.7712
+con_loss1: 2.1282, con_loss2: 2.1305, dep_loss: 5.2983, loss: 4.2533, acc: 0.9884, test_acc: 0.8436, f1: 0.7660
+con_loss1: 1.9271, con_loss2: 1.9303, dep_loss: 5.2983, loss: 4.0651, acc: 0.9888, test_acc: 0.8490, f1: 0.7791
+con_loss1: 2.2243, con_loss2: 2.2245, dep_loss: 5.2983, loss: 4.7204, acc: 0.9871, test_acc: 0.8508, f1: 0.7808
+con_loss1: 2.2122, con_loss2: 2.2031, dep_loss: 5.2983, loss: 4.4609, acc: 0.9854, test_acc: 0.8499, f1: 0.7792
+con_loss1: 2.1521, con_loss2: 2.1403, dep_loss: 5.2983, loss: 4.2825, acc: 0.9859, test_acc: 0.8534, f1: 0.7850
+con_loss1: 1.9434, con_loss2: 1.9301, dep_loss: 5.2983, loss: 4.1215, acc: 0.9844, test_acc: 0.8499, f1: 0.7788
+con_loss1: 1.8562, con_loss2: 1.8289, dep_loss: 5.2983, loss: 3.9688, acc: 0.9848, test_acc: 0.8517, f1: 0.7773
+con_loss1: 1.8407, con_loss2: 1.8143, dep_loss: 5.2983, loss: 3.9691, acc: 0.9853, test_acc: 0.8534, f1: 0.7770
+con_loss1: 1.7654, con_loss2: 1.7633, dep_loss: 5.2983, loss: 3.8953, acc: 0.9857, test_acc: 0.8490, f1: 0.7644
+con_loss1: 1.7464, con_loss2: 1.7525, dep_loss: 5.2983, loss: 3.8823, acc: 0.9861, test_acc: 0.8499, f1: 0.7712
+con_loss1: 2.3802, con_loss2: 2.3637, dep_loss: 5.2983, loss: 4.8569, acc: 0.9848, test_acc: 0.8525, f1: 0.7824
+con_loss1: 1.9109, con_loss2: 1.8818, dep_loss: 5.2983, loss: 4.0242, acc: 0.9852, test_acc: 0.8525, f1: 0.7836
+con_loss1: 1.8126, con_loss2: 1.7992, dep_loss: 5.2983, loss: 3.9530, acc: 0.9856, test_acc: 0.8481, f1: 0.7764
+con_loss1: 1.8968, con_loss2: 1.8808, dep_loss: 5.2983, loss: 4.0163, acc: 0.9859, test_acc: 0.8481, f1: 0.7757
+con_loss1: 2.6532, con_loss2: 2.6391, dep_loss: 5.2983, loss: 5.3334, acc: 0.9832, test_acc: 0.8391, f1: 0.7587
+con_loss1: 2.1786, con_loss2: 2.1735, dep_loss: 5.2983, loss: 4.4759, acc: 0.9821, test_acc: 0.8409, f1: 0.7609
+con_loss1: 2.1568, con_loss2: 2.1427, dep_loss: 5.2983, loss: 4.2927, acc: 0.9826, test_acc: 0.8374, f1: 0.7512
+con_loss1: 1.8438, con_loss2: 1.8117, dep_loss: 5.2983, loss: 3.9623, acc: 0.9830, test_acc: 0.8365, f1: 0.7428
+con_loss1: 2.1083, con_loss2: 2.0975, dep_loss: 5.2983, loss: 4.2273, acc: 0.9833, test_acc: 0.8382, f1: 0.7395
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 9
+con_loss1: 1.7182, con_loss2: 1.7086, dep_loss: 5.2983, loss: 3.8412, acc: 1.0000, test_acc: 0.8365, f1: 0.7327
+con_loss1: 1.9299, con_loss2: 1.9124, dep_loss: 5.2983, loss: 4.0503, acc: 1.0000, test_acc: 0.8365, f1: 0.7345
+con_loss1: 1.9791, con_loss2: 1.9748, dep_loss: 5.2983, loss: 4.1019, acc: 1.0000, test_acc: 0.8517, f1: 0.7783
+con_loss1: 2.3671, con_loss2: 2.2837, dep_loss: 5.2983, loss: 4.4784, acc: 1.0000, test_acc: 0.8525, f1: 0.7941
+con_loss1: 1.7947, con_loss2: 1.7562, dep_loss: 5.2983, loss: 3.9016, acc: 1.0000, test_acc: 0.8427, f1: 0.7876
+con_loss1: 1.7476, con_loss2: 1.7650, dep_loss: 5.2983, loss: 3.8840, acc: 1.0000, test_acc: 0.8454, f1: 0.7892
+con_loss1: 1.7903, con_loss2: 1.7645, dep_loss: 5.2983, loss: 3.9068, acc: 1.0000, test_acc: 0.8391, f1: 0.7582
+con_loss1: 2.2629, con_loss2: 2.2431, dep_loss: 5.2983, loss: 4.4359, acc: 0.9922, test_acc: 0.8356, f1: 0.7413
+con_loss1: 1.9833, con_loss2: 1.9683, dep_loss: 5.2983, loss: 4.0995, acc: 0.9931, test_acc: 0.8239, f1: 0.7330
+con_loss1: 1.8531, con_loss2: 1.8521, dep_loss: 5.2983, loss: 3.9777, acc: 0.9938, test_acc: 0.8338, f1: 0.7619
+con_loss1: 1.7748, con_loss2: 1.7728, dep_loss: 5.2983, loss: 3.8991, acc: 0.9943, test_acc: 0.8293, f1: 0.7580
+con_loss1: 1.9429, con_loss2: 1.9324, dep_loss: 5.2983, loss: 4.0679, acc: 0.9948, test_acc: 0.8266, f1: 0.7510
+con_loss1: 2.1770, con_loss2: 2.1995, dep_loss: 5.2983, loss: 4.5600, acc: 0.9904, test_acc: 0.8231, f1: 0.7401
+con_loss1: 2.2732, con_loss2: 2.2575, dep_loss: 5.2983, loss: 4.5206, acc: 0.9866, test_acc: 0.8239, f1: 0.7381
+con_loss1: 1.7204, con_loss2: 1.7033, dep_loss: 5.2983, loss: 3.8395, acc: 0.9875, test_acc: 0.8248, f1: 0.7312
+con_loss1: 2.2044, con_loss2: 2.2189, dep_loss: 5.2983, loss: 4.4379, acc: 0.9844, test_acc: 0.8275, f1: 0.7414
+con_loss1: 1.8280, con_loss2: 1.7895, dep_loss: 5.2983, loss: 3.9360, acc: 0.9853, test_acc: 0.8302, f1: 0.7495
+con_loss1: 1.8539, con_loss2: 1.8610, dep_loss: 5.2983, loss: 3.9884, acc: 0.9861, test_acc: 0.8329, f1: 0.7571
+con_loss1: 2.0838, con_loss2: 2.0613, dep_loss: 5.2983, loss: 4.2147, acc: 0.9868, test_acc: 0.8329, f1: 0.7577
+con_loss1: 2.0496, con_loss2: 2.0316, dep_loss: 5.2983, loss: 4.3434, acc: 0.9844, test_acc: 0.8347, f1: 0.7561
+con_loss1: 1.9354, con_loss2: 1.8987, dep_loss: 5.2983, loss: 4.0476, acc: 0.9851, test_acc: 0.8338, f1: 0.7491
+con_loss1: 2.0262, con_loss2: 1.9985, dep_loss: 5.2983, loss: 4.2442, acc: 0.9830, test_acc: 0.8284, f1: 0.7358
+con_loss1: 1.8304, con_loss2: 1.8111, dep_loss: 5.2983, loss: 3.9457, acc: 0.9837, test_acc: 0.8266, f1: 0.7271
+con_loss1: 1.7467, con_loss2: 1.7299, dep_loss: 5.2983, loss: 3.8762, acc: 0.9844, test_acc: 0.8257, f1: 0.7190
+con_loss1: 2.3409, con_loss2: 2.3308, dep_loss: 5.2983, loss: 4.5663, acc: 0.9825, test_acc: 0.8266, f1: 0.7305
+con_loss1: 1.8980, con_loss2: 1.8342, dep_loss: 5.2983, loss: 3.9960, acc: 0.9832, test_acc: 0.8347, f1: 0.7701
+con_loss1: 2.1196, con_loss2: 2.1468, dep_loss: 5.2983, loss: 4.3025, acc: 0.9838, test_acc: 0.8365, f1: 0.7741
+con_loss1: 1.7649, con_loss2: 1.7627, dep_loss: 5.2983, loss: 3.9659, acc: 0.9821, test_acc: 0.8338, f1: 0.7675
+con_loss1: 1.9850, con_loss2: 1.9853, dep_loss: 5.2983, loss: 4.1857, acc: 0.9828, test_acc: 0.8320, f1: 0.7575
+con_loss1: 1.7427, con_loss2: 1.7257, dep_loss: 5.2983, loss: 3.8635, acc: 0.9833, test_acc: 0.8213, f1: 0.7376
+con_loss1: 2.0756, con_loss2: 2.0739, dep_loss: 5.2983, loss: 4.2561, acc: 0.9839, test_acc: 0.8150, f1: 0.7199
+con_loss1: 1.8749, con_loss2: 1.8558, dep_loss: 5.2983, loss: 4.0045, acc: 0.9844, test_acc: 0.8195, f1: 0.7235
+con_loss1: 1.9533, con_loss2: 1.9265, dep_loss: 5.2983, loss: 4.0667, acc: 0.9848, test_acc: 0.8204, f1: 0.7231
+con_loss1: 1.7312, con_loss2: 1.7366, dep_loss: 5.2983, loss: 3.8600, acc: 0.9853, test_acc: 0.8293, f1: 0.7425
+con_loss1: 2.1180, con_loss2: 2.1047, dep_loss: 5.2983, loss: 4.2375, acc: 0.9857, test_acc: 0.8382, f1: 0.7597
+con_loss1: 2.0205, con_loss2: 2.0033, dep_loss: 5.2983, loss: 4.1634, acc: 0.9861, test_acc: 0.8356, f1: 0.7586
+con_loss1: 1.9129, con_loss2: 1.9175, dep_loss: 5.2983, loss: 4.0386, acc: 0.9865, test_acc: 0.8391, f1: 0.7668
+con_loss1: 1.6941, con_loss2: 1.6867, dep_loss: 5.2983, loss: 3.8181, acc: 0.9868, test_acc: 0.8391, f1: 0.7703
+con_loss1: 2.4321, con_loss2: 2.3920, dep_loss: 5.2983, loss: 4.9553, acc: 0.9824, test_acc: 0.8382, f1: 0.7618
+con_loss1: 1.7903, con_loss2: 1.7953, dep_loss: 5.2983, loss: 3.9187, acc: 0.9828, test_acc: 0.8347, f1: 0.7481
+con_loss1: 1.8222, con_loss2: 1.7752, dep_loss: 5.2983, loss: 3.9230, acc: 0.9832, test_acc: 0.8302, f1: 0.7397
+con_loss1: 2.0990, con_loss2: 2.0650, dep_loss: 5.2983, loss: 4.2074, acc: 0.9836, test_acc: 0.8257, f1: 0.7284
+con_loss1: 2.3124, con_loss2: 2.2672, dep_loss: 5.2983, loss: 4.6461, acc: 0.9826, test_acc: 0.8329, f1: 0.7434
+con_loss1: 1.7197, con_loss2: 1.7241, dep_loss: 5.2983, loss: 3.8474, acc: 0.9830, test_acc: 0.8347, f1: 0.7463
+con_loss1: 1.8246, con_loss2: 1.8242, dep_loss: 5.2983, loss: 3.9495, acc: 0.9833, test_acc: 0.8508, f1: 0.7851
+con_loss1: 1.0411, con_loss2: 1.0539, dep_loss: 5.2983, loss: 3.1747, acc: 0.9835, test_acc: 0.8463, f1: 0.7780
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 10
+con_loss1: 1.8207, con_loss2: 1.8296, dep_loss: 5.2983, loss: 3.9555, acc: 1.0000, test_acc: 0.8391, f1: 0.7595
+con_loss1: 2.1631, con_loss2: 2.1377, dep_loss: 5.2983, loss: 4.2745, acc: 1.0000, test_acc: 0.8400, f1: 0.7584
+con_loss1: 1.7678, con_loss2: 1.7425, dep_loss: 5.2983, loss: 3.8885, acc: 1.0000, test_acc: 0.8436, f1: 0.7712
+con_loss1: 1.8937, con_loss2: 1.8905, dep_loss: 5.2983, loss: 4.0176, acc: 1.0000, test_acc: 0.8454, f1: 0.7774
+con_loss1: 2.0365, con_loss2: 2.0095, dep_loss: 5.2983, loss: 4.1811, acc: 1.0000, test_acc: 0.8365, f1: 0.7631
+con_loss1: 1.7568, con_loss2: 1.7373, dep_loss: 5.2983, loss: 3.8778, acc: 1.0000, test_acc: 0.8445, f1: 0.7710
+con_loss1: 2.0205, con_loss2: 2.0181, dep_loss: 5.2983, loss: 4.1423, acc: 1.0000, test_acc: 0.8400, f1: 0.7583
+con_loss1: 1.8328, con_loss2: 1.8582, dep_loss: 5.2983, loss: 3.9738, acc: 1.0000, test_acc: 0.8382, f1: 0.7545
+con_loss1: 2.1194, con_loss2: 2.1090, dep_loss: 5.2983, loss: 4.2441, acc: 1.0000, test_acc: 0.8356, f1: 0.7437
+con_loss1: 1.9389, con_loss2: 1.9228, dep_loss: 5.2983, loss: 4.0559, acc: 1.0000, test_acc: 0.8329, f1: 0.7391
+con_loss1: 1.7760, con_loss2: 1.7841, dep_loss: 5.2983, loss: 3.9040, acc: 1.0000, test_acc: 0.8347, f1: 0.7435
+con_loss1: 1.8819, con_loss2: 1.8940, dep_loss: 5.2983, loss: 4.1540, acc: 0.9948, test_acc: 0.8365, f1: 0.7483
+con_loss1: 1.7163, con_loss2: 1.7198, dep_loss: 5.2983, loss: 3.8478, acc: 0.9952, test_acc: 0.8356, f1: 0.7480
+con_loss1: 1.9356, con_loss2: 1.9284, dep_loss: 5.2983, loss: 4.0663, acc: 0.9955, test_acc: 0.8374, f1: 0.7523
+con_loss1: 1.9210, con_loss2: 1.9145, dep_loss: 5.2983, loss: 4.0632, acc: 0.9958, test_acc: 0.8356, f1: 0.7482
+con_loss1: 1.7590, con_loss2: 1.7585, dep_loss: 5.2983, loss: 3.9115, acc: 0.9961, test_acc: 0.8436, f1: 0.7656
+con_loss1: 1.7718, con_loss2: 1.7661, dep_loss: 5.2983, loss: 3.8981, acc: 0.9963, test_acc: 0.8427, f1: 0.7633
+con_loss1: 1.9232, con_loss2: 1.9015, dep_loss: 5.2983, loss: 4.0407, acc: 0.9965, test_acc: 0.8382, f1: 0.7555
+con_loss1: 2.1662, con_loss2: 2.1531, dep_loss: 5.2983, loss: 4.2856, acc: 0.9967, test_acc: 0.8391, f1: 0.7566
+con_loss1: 2.3574, con_loss2: 2.3410, dep_loss: 5.2983, loss: 4.5866, acc: 0.9938, test_acc: 0.8400, f1: 0.7619
+con_loss1: 1.8777, con_loss2: 1.8800, dep_loss: 5.2983, loss: 4.0050, acc: 0.9940, test_acc: 0.8409, f1: 0.7664
+con_loss1: 2.1906, con_loss2: 2.1878, dep_loss: 5.2983, loss: 4.3219, acc: 0.9943, test_acc: 0.8374, f1: 0.7669
+con_loss1: 1.8716, con_loss2: 1.8687, dep_loss: 5.2983, loss: 4.0252, acc: 0.9946, test_acc: 0.8409, f1: 0.7684
+con_loss1: 2.1473, con_loss2: 2.1414, dep_loss: 5.2983, loss: 4.3317, acc: 0.9948, test_acc: 0.8338, f1: 0.7511
+con_loss1: 1.9880, con_loss2: 1.9859, dep_loss: 5.2983, loss: 4.1112, acc: 0.9950, test_acc: 0.8374, f1: 0.7517
+con_loss1: 2.0351, con_loss2: 2.0374, dep_loss: 5.2983, loss: 4.2457, acc: 0.9928, test_acc: 0.8472, f1: 0.7711
+con_loss1: 1.8590, con_loss2: 1.8346, dep_loss: 5.2983, loss: 4.0755, acc: 0.9907, test_acc: 0.8508, f1: 0.7815
+con_loss1: 1.7487, con_loss2: 1.7341, dep_loss: 5.2983, loss: 3.8705, acc: 0.9911, test_acc: 0.8481, f1: 0.7847
+con_loss1: 1.9082, con_loss2: 1.8928, dep_loss: 5.2983, loss: 4.0256, acc: 0.9914, test_acc: 0.8365, f1: 0.7633
+con_loss1: 1.7824, con_loss2: 1.7773, dep_loss: 5.2983, loss: 3.9232, acc: 0.9917, test_acc: 0.8490, f1: 0.7763
+con_loss1: 1.7993, con_loss2: 1.8130, dep_loss: 5.2983, loss: 3.9338, acc: 0.9919, test_acc: 0.8382, f1: 0.7529
+con_loss1: 2.0193, con_loss2: 2.0257, dep_loss: 5.2983, loss: 4.1943, acc: 0.9922, test_acc: 0.8347, f1: 0.7426
+con_loss1: 1.8323, con_loss2: 1.8223, dep_loss: 5.2983, loss: 3.9500, acc: 0.9924, test_acc: 0.8356, f1: 0.7441
+con_loss1: 1.8188, con_loss2: 1.8102, dep_loss: 5.2983, loss: 3.9416, acc: 0.9926, test_acc: 0.8490, f1: 0.7764
+con_loss1: 2.1292, con_loss2: 2.1009, dep_loss: 5.2983, loss: 4.2406, acc: 0.9929, test_acc: 0.8499, f1: 0.7825
+con_loss1: 1.6476, con_loss2: 1.6621, dep_loss: 5.2983, loss: 3.7789, acc: 0.9931, test_acc: 0.8508, f1: 0.7841
+con_loss1: 1.6740, con_loss2: 1.6811, dep_loss: 5.2983, loss: 3.8034, acc: 0.9932, test_acc: 0.8472, f1: 0.7820
+con_loss1: 1.9412, con_loss2: 1.9266, dep_loss: 5.2983, loss: 4.0719, acc: 0.9934, test_acc: 0.8454, f1: 0.7722
+con_loss1: 1.8084, con_loss2: 1.7939, dep_loss: 5.2983, loss: 3.9256, acc: 0.9936, test_acc: 0.8436, f1: 0.7662
+con_loss1: 1.8757, con_loss2: 1.8408, dep_loss: 5.2983, loss: 3.9979, acc: 0.9938, test_acc: 0.8382, f1: 0.7534
+con_loss1: 1.7158, con_loss2: 1.6971, dep_loss: 5.2983, loss: 3.8413, acc: 0.9939, test_acc: 0.8382, f1: 0.7536
+con_loss1: 1.9603, con_loss2: 1.9360, dep_loss: 5.2983, loss: 4.0724, acc: 0.9940, test_acc: 0.8427, f1: 0.7659
+con_loss1: 2.1348, con_loss2: 2.1258, dep_loss: 5.2983, loss: 4.2549, acc: 0.9942, test_acc: 0.8499, f1: 0.7797
+con_loss1: 1.8015, con_loss2: 1.7946, dep_loss: 5.2983, loss: 3.9265, acc: 0.9943, test_acc: 0.8454, f1: 0.7774
+con_loss1: 1.8502, con_loss2: 1.8668, dep_loss: 5.2983, loss: 3.9863, acc: 0.9944, test_acc: 0.8454, f1: 0.7790
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 11
+con_loss1: 1.7097, con_loss2: 1.7087, dep_loss: 5.2983, loss: 3.8452, acc: 1.0000, test_acc: 0.8436, f1: 0.7778
+con_loss1: 1.7265, con_loss2: 1.7319, dep_loss: 5.2983, loss: 3.8524, acc: 1.0000, test_acc: 0.8454, f1: 0.7797
+con_loss1: 1.8745, con_loss2: 1.8864, dep_loss: 5.2983, loss: 4.0096, acc: 1.0000, test_acc: 0.8472, f1: 0.7809
+con_loss1: 2.2102, con_loss2: 2.2065, dep_loss: 5.2983, loss: 4.3554, acc: 1.0000, test_acc: 0.8499, f1: 0.7781
+con_loss1: 1.8297, con_loss2: 1.8280, dep_loss: 5.2983, loss: 3.9532, acc: 1.0000, test_acc: 0.8463, f1: 0.7715
+con_loss1: 2.9020, con_loss2: 2.8869, dep_loss: 5.2983, loss: 5.5276, acc: 0.9792, test_acc: 0.8445, f1: 0.7679
+con_loss1: 2.0858, con_loss2: 2.0951, dep_loss: 5.2983, loss: 4.2144, acc: 0.9821, test_acc: 0.8427, f1: 0.7658
+con_loss1: 1.8703, con_loss2: 1.8507, dep_loss: 5.2983, loss: 3.9865, acc: 0.9844, test_acc: 0.8463, f1: 0.7761
+con_loss1: 1.8333, con_loss2: 1.8130, dep_loss: 5.2983, loss: 3.9471, acc: 0.9861, test_acc: 0.8436, f1: 0.7774
+con_loss1: 1.8159, con_loss2: 1.8314, dep_loss: 5.2983, loss: 3.9612, acc: 0.9875, test_acc: 0.8454, f1: 0.7796
+con_loss1: 1.7648, con_loss2: 1.7421, dep_loss: 5.2983, loss: 3.8767, acc: 0.9886, test_acc: 0.8436, f1: 0.7751
+con_loss1: 1.8294, con_loss2: 1.8229, dep_loss: 5.2983, loss: 3.9488, acc: 0.9896, test_acc: 0.8499, f1: 0.7821
+con_loss1: 1.6686, con_loss2: 1.6755, dep_loss: 5.2983, loss: 3.8017, acc: 0.9904, test_acc: 0.8409, f1: 0.7617
+con_loss1: 1.7417, con_loss2: 1.7215, dep_loss: 5.2983, loss: 3.8565, acc: 0.9911, test_acc: 0.8418, f1: 0.7651
+con_loss1: 1.8083, con_loss2: 1.8075, dep_loss: 5.2983, loss: 3.9352, acc: 0.9917, test_acc: 0.8463, f1: 0.7744
+con_loss1: 1.8700, con_loss2: 1.8561, dep_loss: 5.2983, loss: 3.9855, acc: 0.9922, test_acc: 0.8445, f1: 0.7715
+con_loss1: 1.8913, con_loss2: 1.8754, dep_loss: 5.2983, loss: 4.0070, acc: 0.9926, test_acc: 0.8463, f1: 0.7742
+con_loss1: 1.7475, con_loss2: 1.7303, dep_loss: 5.2983, loss: 3.8668, acc: 0.9931, test_acc: 0.8490, f1: 0.7784
+con_loss1: 1.9361, con_loss2: 1.9336, dep_loss: 5.2983, loss: 4.0589, acc: 0.9934, test_acc: 0.8472, f1: 0.7769
+con_loss1: 1.6771, con_loss2: 1.6671, dep_loss: 5.2983, loss: 3.7953, acc: 0.9938, test_acc: 0.8472, f1: 0.7757
+con_loss1: 2.1390, con_loss2: 2.1227, dep_loss: 5.2983, loss: 4.2532, acc: 0.9940, test_acc: 0.8454, f1: 0.7750
+con_loss1: 2.1940, con_loss2: 2.1896, dep_loss: 5.2983, loss: 4.6276, acc: 0.9915, test_acc: 0.8490, f1: 0.7816
+con_loss1: 1.6966, con_loss2: 1.6830, dep_loss: 5.2983, loss: 3.8158, acc: 0.9918, test_acc: 0.8481, f1: 0.7785
+con_loss1: 1.7273, con_loss2: 1.7242, dep_loss: 5.2983, loss: 3.8490, acc: 0.9922, test_acc: 0.8454, f1: 0.7715
+con_loss1: 1.7300, con_loss2: 1.6920, dep_loss: 5.2983, loss: 3.8373, acc: 0.9925, test_acc: 0.8472, f1: 0.7726
+con_loss1: 1.9905, con_loss2: 1.9749, dep_loss: 5.2983, loss: 4.1058, acc: 0.9928, test_acc: 0.8463, f1: 0.7723
+con_loss1: 1.9436, con_loss2: 1.9541, dep_loss: 5.2983, loss: 4.1440, acc: 0.9907, test_acc: 0.8463, f1: 0.7718
+con_loss1: 2.4331, con_loss2: 2.4187, dep_loss: 5.2983, loss: 4.8322, acc: 0.9888, test_acc: 0.8481, f1: 0.7727
+con_loss1: 1.7127, con_loss2: 1.7091, dep_loss: 5.2983, loss: 3.8338, acc: 0.9892, test_acc: 0.8481, f1: 0.7711
+con_loss1: 1.9198, con_loss2: 1.9351, dep_loss: 5.2983, loss: 4.0512, acc: 0.9896, test_acc: 0.8481, f1: 0.7725
+con_loss1: 1.8019, con_loss2: 1.7509, dep_loss: 5.2983, loss: 3.8983, acc: 0.9899, test_acc: 0.8508, f1: 0.7741
+con_loss1: 1.6912, con_loss2: 1.6541, dep_loss: 5.2983, loss: 3.7955, acc: 0.9902, test_acc: 0.8499, f1: 0.7711
+con_loss1: 1.7250, con_loss2: 1.7151, dep_loss: 5.2983, loss: 3.8456, acc: 0.9905, test_acc: 0.8490, f1: 0.7699
+con_loss1: 1.9717, con_loss2: 1.9585, dep_loss: 5.2983, loss: 4.0873, acc: 0.9908, test_acc: 0.8454, f1: 0.7643
+con_loss1: 2.1173, con_loss2: 2.1002, dep_loss: 5.2983, loss: 4.2307, acc: 0.9911, test_acc: 0.8490, f1: 0.7809
+con_loss1: 1.6470, con_loss2: 1.6563, dep_loss: 5.2983, loss: 3.7780, acc: 0.9913, test_acc: 0.8427, f1: 0.7886
+con_loss1: 2.0780, con_loss2: 2.0631, dep_loss: 5.2983, loss: 4.3572, acc: 0.9899, test_acc: 0.8436, f1: 0.7852
+con_loss1: 1.8138, con_loss2: 1.7929, dep_loss: 5.2983, loss: 3.9516, acc: 0.9901, test_acc: 0.8427, f1: 0.7734
+con_loss1: 1.7149, con_loss2: 1.7256, dep_loss: 5.2983, loss: 3.8430, acc: 0.9904, test_acc: 0.8418, f1: 0.7634
+con_loss1: 1.7932, con_loss2: 1.7650, dep_loss: 5.2983, loss: 3.9096, acc: 0.9906, test_acc: 0.8427, f1: 0.7627
+con_loss1: 1.9080, con_loss2: 1.9110, dep_loss: 5.2983, loss: 4.0326, acc: 0.9909, test_acc: 0.8445, f1: 0.7642
+con_loss1: 1.9850, con_loss2: 1.9746, dep_loss: 5.2983, loss: 4.1849, acc: 0.9896, test_acc: 0.8454, f1: 0.7677
+con_loss1: 1.8147, con_loss2: 1.8050, dep_loss: 5.2983, loss: 3.9392, acc: 0.9898, test_acc: 0.8418, f1: 0.7621
+con_loss1: 1.7322, con_loss2: 1.7068, dep_loss: 5.2983, loss: 3.8426, acc: 0.9901, test_acc: 0.8400, f1: 0.7592
+con_loss1: 1.8191, con_loss2: 1.7963, dep_loss: 5.2983, loss: 3.9306, acc: 0.9903, test_acc: 0.8418, f1: 0.7709
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 12
+con_loss1: 2.1478, con_loss2: 2.0785, dep_loss: 5.2983, loss: 4.2401, acc: 1.0000, test_acc: 0.8195, f1: 0.7640
+con_loss1: 1.9335, con_loss2: 1.9152, dep_loss: 5.2983, loss: 4.1058, acc: 0.9688, test_acc: 0.8454, f1: 0.7922
+con_loss1: 1.6634, con_loss2: 1.6470, dep_loss: 5.2983, loss: 3.7822, acc: 0.9792, test_acc: 0.8570, f1: 0.7955
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8624_f1_0.7968
+con_loss1: 1.8443, con_loss2: 1.8091, dep_loss: 5.2983, loss: 3.9530, acc: 0.9844, test_acc: 0.8624, f1: 0.7968
+con_loss1: 1.7450, con_loss2: 1.7348, dep_loss: 5.2983, loss: 3.8634, acc: 0.9875, test_acc: 0.8579, f1: 0.7864
+con_loss1: 2.1165, con_loss2: 2.1103, dep_loss: 5.2983, loss: 4.2354, acc: 0.9896, test_acc: 0.8499, f1: 0.7704
+con_loss1: 1.7349, con_loss2: 1.7338, dep_loss: 5.2983, loss: 3.8574, acc: 0.9911, test_acc: 0.8445, f1: 0.7626
+con_loss1: 1.7937, con_loss2: 1.7846, dep_loss: 5.2983, loss: 3.9111, acc: 0.9922, test_acc: 0.8624, f1: 0.7999
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8740_f1_0.8212
+con_loss1: 1.9188, con_loss2: 1.9133, dep_loss: 5.2983, loss: 4.0378, acc: 0.9931, test_acc: 0.8740, f1: 0.8212
+con_loss1: 2.1233, con_loss2: 2.1300, dep_loss: 5.2983, loss: 4.3013, acc: 0.9875, test_acc: 0.8615, f1: 0.7979
+con_loss1: 2.3847, con_loss2: 2.3797, dep_loss: 5.2983, loss: 4.5037, acc: 0.9886, test_acc: 0.8400, f1: 0.7551
+con_loss1: 2.2192, con_loss2: 2.2121, dep_loss: 5.2983, loss: 4.4663, acc: 0.9844, test_acc: 0.8356, f1: 0.7426
+con_loss1: 1.6899, con_loss2: 1.6783, dep_loss: 5.2983, loss: 3.8081, acc: 0.9856, test_acc: 0.8454, f1: 0.7636
+con_loss1: 1.7858, con_loss2: 1.7851, dep_loss: 5.2983, loss: 3.9074, acc: 0.9866, test_acc: 0.8561, f1: 0.7880
+con_loss1: 2.0171, con_loss2: 2.0228, dep_loss: 5.2983, loss: 4.1429, acc: 0.9875, test_acc: 0.8561, f1: 0.7953
+con_loss1: 2.0432, con_loss2: 2.0165, dep_loss: 5.2983, loss: 4.3975, acc: 0.9844, test_acc: 0.8490, f1: 0.7895
+con_loss1: 1.7106, con_loss2: 1.7141, dep_loss: 5.2983, loss: 3.8364, acc: 0.9853, test_acc: 0.8517, f1: 0.7913
+con_loss1: 1.7651, con_loss2: 1.7436, dep_loss: 5.2983, loss: 3.8860, acc: 0.9861, test_acc: 0.8517, f1: 0.7831
+con_loss1: 2.1247, con_loss2: 2.1092, dep_loss: 5.2983, loss: 4.2428, acc: 0.9868, test_acc: 0.8543, f1: 0.7865
+con_loss1: 1.9025, con_loss2: 1.8828, dep_loss: 5.2983, loss: 4.0287, acc: 0.9875, test_acc: 0.8517, f1: 0.7812
+con_loss1: 2.0186, con_loss2: 2.0123, dep_loss: 5.2983, loss: 4.1376, acc: 0.9881, test_acc: 0.8508, f1: 0.7795
+con_loss1: 2.3474, con_loss2: 2.3183, dep_loss: 5.2983, loss: 4.7220, acc: 0.9830, test_acc: 0.8490, f1: 0.7769
+con_loss1: 1.7407, con_loss2: 1.7358, dep_loss: 5.2983, loss: 3.8665, acc: 0.9837, test_acc: 0.8490, f1: 0.7769
+con_loss1: 1.8001, con_loss2: 1.8155, dep_loss: 5.2983, loss: 3.9708, acc: 0.9844, test_acc: 0.8499, f1: 0.7786
+con_loss1: 2.1028, con_loss2: 2.0812, dep_loss: 5.2983, loss: 4.2177, acc: 0.9850, test_acc: 0.8409, f1: 0.7593
+con_loss1: 1.9416, con_loss2: 1.9409, dep_loss: 5.2983, loss: 4.0729, acc: 0.9856, test_acc: 0.8382, f1: 0.7515
+con_loss1: 1.6799, con_loss2: 1.6789, dep_loss: 5.2983, loss: 3.8039, acc: 0.9861, test_acc: 0.8338, f1: 0.7414
+con_loss1: 2.4121, con_loss2: 2.4111, dep_loss: 5.2983, loss: 4.7552, acc: 0.9821, test_acc: 0.8409, f1: 0.7555
+con_loss1: 1.8609, con_loss2: 1.8146, dep_loss: 5.2983, loss: 3.9619, acc: 0.9828, test_acc: 0.8445, f1: 0.7673
+con_loss1: 1.7177, con_loss2: 1.6987, dep_loss: 5.2983, loss: 3.8329, acc: 0.9833, test_acc: 0.8427, f1: 0.7727
+con_loss1: 1.8909, con_loss2: 1.8768, dep_loss: 5.2983, loss: 4.0153, acc: 0.9839, test_acc: 0.8436, f1: 0.7742
+con_loss1: 2.2620, con_loss2: 2.2503, dep_loss: 5.2983, loss: 4.3880, acc: 0.9844, test_acc: 0.8418, f1: 0.7607
+con_loss1: 2.0400, con_loss2: 2.0402, dep_loss: 5.2983, loss: 4.1656, acc: 0.9848, test_acc: 0.8347, f1: 0.7409
+con_loss1: 2.1136, con_loss2: 2.0809, dep_loss: 5.2983, loss: 4.2195, acc: 0.9853, test_acc: 0.8329, f1: 0.7354
+con_loss1: 2.1044, con_loss2: 2.1035, dep_loss: 5.2983, loss: 4.2307, acc: 0.9857, test_acc: 0.8365, f1: 0.7431
+con_loss1: 1.8337, con_loss2: 1.8306, dep_loss: 5.2983, loss: 3.9576, acc: 0.9861, test_acc: 0.8338, f1: 0.7350
+con_loss1: 2.0085, con_loss2: 1.9933, dep_loss: 5.2983, loss: 4.1981, acc: 0.9848, test_acc: 0.8320, f1: 0.7316
+con_loss1: 1.7167, con_loss2: 1.6983, dep_loss: 5.2983, loss: 3.8363, acc: 0.9852, test_acc: 0.8284, f1: 0.7292
+con_loss1: 1.9764, con_loss2: 1.9529, dep_loss: 5.2983, loss: 4.1946, acc: 0.9840, test_acc: 0.8293, f1: 0.7333
+con_loss1: 1.6375, con_loss2: 1.6333, dep_loss: 5.2983, loss: 3.7584, acc: 0.9844, test_acc: 0.8248, f1: 0.7197
+con_loss1: 1.6722, con_loss2: 1.6549, dep_loss: 5.2983, loss: 3.7965, acc: 0.9848, test_acc: 0.8311, f1: 0.7265
+con_loss1: 1.7935, con_loss2: 1.7702, dep_loss: 5.2983, loss: 3.9045, acc: 0.9851, test_acc: 0.8338, f1: 0.7387
+con_loss1: 1.9725, con_loss2: 1.9620, dep_loss: 5.2983, loss: 4.0890, acc: 0.9855, test_acc: 0.8409, f1: 0.7564
+con_loss1: 1.7138, con_loss2: 1.7246, dep_loss: 5.2983, loss: 3.8430, acc: 0.9858, test_acc: 0.8400, f1: 0.7574
+con_loss1: 1.7598, con_loss2: 1.7288, dep_loss: 5.2983, loss: 3.8680, acc: 0.9861, test_acc: 0.8481, f1: 0.7754
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 13
+con_loss1: 1.7000, con_loss2: 1.6716, dep_loss: 5.2983, loss: 3.8090, acc: 1.0000, test_acc: 0.8499, f1: 0.7782
+con_loss1: 1.8485, con_loss2: 1.8396, dep_loss: 5.2983, loss: 3.9695, acc: 1.0000, test_acc: 0.8454, f1: 0.7747
+con_loss1: 2.0105, con_loss2: 1.9957, dep_loss: 5.2983, loss: 4.2130, acc: 0.9792, test_acc: 0.8409, f1: 0.7710
+con_loss1: 1.6622, con_loss2: 1.6693, dep_loss: 5.2983, loss: 3.7903, acc: 0.9844, test_acc: 0.8409, f1: 0.7708
+con_loss1: 1.9680, con_loss2: 1.9663, dep_loss: 5.2983, loss: 4.0900, acc: 0.9875, test_acc: 0.8472, f1: 0.7659
+con_loss1: 2.3108, con_loss2: 2.3127, dep_loss: 5.2983, loss: 4.6683, acc: 0.9792, test_acc: 0.8356, f1: 0.7437
+con_loss1: 1.7896, con_loss2: 1.7765, dep_loss: 5.2983, loss: 3.9069, acc: 0.9821, test_acc: 0.8382, f1: 0.7515
+con_loss1: 1.9043, con_loss2: 1.9293, dep_loss: 5.2983, loss: 4.0627, acc: 0.9844, test_acc: 0.8427, f1: 0.7608
+con_loss1: 1.6806, con_loss2: 1.6786, dep_loss: 5.2983, loss: 3.8054, acc: 0.9861, test_acc: 0.8481, f1: 0.7733
+con_loss1: 1.7097, con_loss2: 1.7180, dep_loss: 5.2983, loss: 3.8363, acc: 0.9875, test_acc: 0.8490, f1: 0.7745
+con_loss1: 1.8794, con_loss2: 1.8873, dep_loss: 5.2983, loss: 4.0836, acc: 0.9830, test_acc: 0.8418, f1: 0.7648
+con_loss1: 1.7147, con_loss2: 1.7105, dep_loss: 5.2983, loss: 3.8390, acc: 0.9844, test_acc: 0.8418, f1: 0.7596
+con_loss1: 1.8677, con_loss2: 1.8696, dep_loss: 5.2983, loss: 3.9979, acc: 0.9856, test_acc: 0.8427, f1: 0.7580
+con_loss1: 1.9082, con_loss2: 1.9080, dep_loss: 5.2983, loss: 4.0305, acc: 0.9866, test_acc: 0.8391, f1: 0.7514
+con_loss1: 1.6920, con_loss2: 1.6799, dep_loss: 5.2983, loss: 3.8110, acc: 0.9875, test_acc: 0.8365, f1: 0.7458
+con_loss1: 1.8178, con_loss2: 1.7870, dep_loss: 5.2983, loss: 3.9247, acc: 0.9883, test_acc: 0.8418, f1: 0.7585
+con_loss1: 1.8879, con_loss2: 1.8841, dep_loss: 5.2983, loss: 4.0085, acc: 0.9890, test_acc: 0.8445, f1: 0.7635
+con_loss1: 1.6764, con_loss2: 1.6624, dep_loss: 5.2983, loss: 3.7922, acc: 0.9896, test_acc: 0.8427, f1: 0.7594
+con_loss1: 1.8099, con_loss2: 1.8138, dep_loss: 5.2983, loss: 3.9337, acc: 0.9901, test_acc: 0.8427, f1: 0.7591
+con_loss1: 1.9782, con_loss2: 1.9541, dep_loss: 5.2983, loss: 4.0892, acc: 0.9906, test_acc: 0.8400, f1: 0.7541
+con_loss1: 1.9317, con_loss2: 1.9166, dep_loss: 5.2983, loss: 4.0460, acc: 0.9911, test_acc: 0.8427, f1: 0.7605
+con_loss1: 1.7221, con_loss2: 1.7200, dep_loss: 5.2983, loss: 3.8432, acc: 0.9915, test_acc: 0.8463, f1: 0.7672
+con_loss1: 1.7625, con_loss2: 1.7890, dep_loss: 5.2983, loss: 3.9246, acc: 0.9918, test_acc: 0.8463, f1: 0.7665
+con_loss1: 1.7932, con_loss2: 1.7641, dep_loss: 5.2983, loss: 3.9027, acc: 0.9922, test_acc: 0.8454, f1: 0.7624
+con_loss1: 1.8577, con_loss2: 1.8190, dep_loss: 5.2983, loss: 3.9609, acc: 0.9925, test_acc: 0.8445, f1: 0.7611
+con_loss1: 1.9052, con_loss2: 1.9024, dep_loss: 5.2983, loss: 4.0254, acc: 0.9928, test_acc: 0.8445, f1: 0.7615
+con_loss1: 1.7967, con_loss2: 1.7688, dep_loss: 5.2983, loss: 3.9049, acc: 0.9931, test_acc: 0.8463, f1: 0.7667
+con_loss1: 1.7583, con_loss2: 1.7565, dep_loss: 5.2983, loss: 3.8792, acc: 0.9933, test_acc: 0.8481, f1: 0.7718
+con_loss1: 1.7138, con_loss2: 1.7308, dep_loss: 5.2983, loss: 3.8446, acc: 0.9935, test_acc: 0.8472, f1: 0.7727
+con_loss1: 2.1678, con_loss2: 2.1634, dep_loss: 5.2983, loss: 4.2871, acc: 0.9938, test_acc: 0.8463, f1: 0.7726
+con_loss1: 1.6992, con_loss2: 1.6934, dep_loss: 5.2983, loss: 3.8202, acc: 0.9940, test_acc: 0.8454, f1: 0.7717
+con_loss1: 1.9762, con_loss2: 1.9607, dep_loss: 5.2983, loss: 4.0905, acc: 0.9941, test_acc: 0.8454, f1: 0.7725
+con_loss1: 1.8460, con_loss2: 1.8166, dep_loss: 5.2983, loss: 3.9526, acc: 0.9943, test_acc: 0.8472, f1: 0.7763
+con_loss1: 1.8771, con_loss2: 1.8802, dep_loss: 5.2983, loss: 3.9998, acc: 0.9945, test_acc: 0.8490, f1: 0.7814
+con_loss1: 1.9173, con_loss2: 1.8990, dep_loss: 5.2983, loss: 4.0848, acc: 0.9929, test_acc: 0.8409, f1: 0.7765
+con_loss1: 2.5267, con_loss2: 2.4994, dep_loss: 5.2983, loss: 4.7820, acc: 0.9913, test_acc: 0.8374, f1: 0.7751
+con_loss1: 2.2239, con_loss2: 2.2294, dep_loss: 5.2983, loss: 4.5267, acc: 0.9899, test_acc: 0.8365, f1: 0.7752
+con_loss1: 1.7550, con_loss2: 1.7179, dep_loss: 5.2983, loss: 3.8590, acc: 0.9901, test_acc: 0.8374, f1: 0.7741
+con_loss1: 1.7872, con_loss2: 1.7762, dep_loss: 5.2983, loss: 3.9050, acc: 0.9904, test_acc: 0.8454, f1: 0.7713
+con_loss1: 2.1510, con_loss2: 2.1401, dep_loss: 5.2983, loss: 4.2670, acc: 0.9906, test_acc: 0.8436, f1: 0.7616
+con_loss1: 1.9416, con_loss2: 1.9402, dep_loss: 5.2983, loss: 4.0675, acc: 0.9909, test_acc: 0.8374, f1: 0.7465
+con_loss1: 1.8695, con_loss2: 1.8776, dep_loss: 5.2983, loss: 4.1170, acc: 0.9896, test_acc: 0.8427, f1: 0.7566
+con_loss1: 1.7994, con_loss2: 1.7569, dep_loss: 5.2983, loss: 3.9023, acc: 0.9898, test_acc: 0.8418, f1: 0.7619
+con_loss1: 1.7609, con_loss2: 1.7570, dep_loss: 5.2983, loss: 3.8829, acc: 0.9901, test_acc: 0.8391, f1: 0.7581
+con_loss1: 1.8584, con_loss2: 1.8547, dep_loss: 5.2983, loss: 3.9787, acc: 0.9903, test_acc: 0.8382, f1: 0.7612
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 14
+con_loss1: 1.6986, con_loss2: 1.6755, dep_loss: 5.2983, loss: 3.8122, acc: 1.0000, test_acc: 0.8365, f1: 0.7591
+con_loss1: 1.8957, con_loss2: 1.8760, dep_loss: 5.2983, loss: 4.0811, acc: 0.9688, test_acc: 0.8382, f1: 0.7608
+con_loss1: 1.8578, con_loss2: 1.8501, dep_loss: 5.2983, loss: 3.9758, acc: 0.9792, test_acc: 0.8436, f1: 0.7722
+con_loss1: 1.6974, con_loss2: 1.6846, dep_loss: 5.2983, loss: 3.8315, acc: 0.9844, test_acc: 0.8418, f1: 0.7718
+con_loss1: 1.6502, con_loss2: 1.6307, dep_loss: 5.2983, loss: 3.7624, acc: 0.9875, test_acc: 0.8418, f1: 0.7703
+con_loss1: 1.7974, con_loss2: 1.7641, dep_loss: 5.2983, loss: 3.9063, acc: 0.9896, test_acc: 0.8418, f1: 0.7692
+con_loss1: 2.0334, con_loss2: 2.0115, dep_loss: 5.2983, loss: 4.2838, acc: 0.9821, test_acc: 0.8454, f1: 0.7748
+con_loss1: 1.7591, con_loss2: 1.7333, dep_loss: 5.2983, loss: 3.8696, acc: 0.9844, test_acc: 0.8472, f1: 0.7757
+con_loss1: 1.7948, con_loss2: 1.8104, dep_loss: 5.2983, loss: 3.9706, acc: 0.9861, test_acc: 0.8490, f1: 0.7752
+con_loss1: 1.7672, con_loss2: 1.7493, dep_loss: 5.2983, loss: 3.8794, acc: 0.9875, test_acc: 0.8445, f1: 0.7650
+con_loss1: 2.2555, con_loss2: 2.2395, dep_loss: 5.2983, loss: 4.3685, acc: 0.9886, test_acc: 0.8374, f1: 0.7511
+con_loss1: 1.8840, con_loss2: 1.8696, dep_loss: 5.2983, loss: 3.9996, acc: 0.9896, test_acc: 0.8356, f1: 0.7481
+con_loss1: 1.7414, con_loss2: 1.7415, dep_loss: 5.2983, loss: 3.8633, acc: 0.9904, test_acc: 0.8347, f1: 0.7446
+con_loss1: 1.8121, con_loss2: 1.8036, dep_loss: 5.2983, loss: 3.9484, acc: 0.9911, test_acc: 0.8365, f1: 0.7478
+con_loss1: 1.9111, con_loss2: 1.9179, dep_loss: 5.2983, loss: 4.1511, acc: 0.9875, test_acc: 0.8356, f1: 0.7461
+con_loss1: 1.8505, con_loss2: 1.8239, dep_loss: 5.2983, loss: 3.9894, acc: 0.9883, test_acc: 0.8347, f1: 0.7447
+con_loss1: 1.6676, con_loss2: 1.6847, dep_loss: 5.2983, loss: 3.8300, acc: 0.9890, test_acc: 0.8382, f1: 0.7513
+con_loss1: 1.8169, con_loss2: 1.8194, dep_loss: 5.2983, loss: 3.9394, acc: 0.9896, test_acc: 0.8391, f1: 0.7532
+con_loss1: 1.7374, con_loss2: 1.7123, dep_loss: 5.2983, loss: 3.8480, acc: 0.9901, test_acc: 0.8391, f1: 0.7544
+con_loss1: 1.7774, con_loss2: 1.7744, dep_loss: 5.2983, loss: 3.8997, acc: 0.9906, test_acc: 0.8400, f1: 0.7567
+con_loss1: 1.9772, con_loss2: 1.9678, dep_loss: 5.2983, loss: 4.1035, acc: 0.9911, test_acc: 0.8427, f1: 0.7611
+con_loss1: 2.0510, con_loss2: 2.0379, dep_loss: 5.2983, loss: 4.1662, acc: 0.9915, test_acc: 0.8391, f1: 0.7521
+con_loss1: 2.1168, con_loss2: 2.0982, dep_loss: 5.2983, loss: 4.2286, acc: 0.9918, test_acc: 0.8356, f1: 0.7451
+con_loss1: 1.8621, con_loss2: 1.8488, dep_loss: 5.2983, loss: 3.9780, acc: 0.9922, test_acc: 0.8400, f1: 0.7546
+con_loss1: 2.4378, con_loss2: 2.4208, dep_loss: 5.2983, loss: 4.7441, acc: 0.9900, test_acc: 0.8391, f1: 0.7521
+con_loss1: 1.8290, con_loss2: 1.8129, dep_loss: 5.2983, loss: 3.9426, acc: 0.9904, test_acc: 0.8409, f1: 0.7526
+con_loss1: 1.8933, con_loss2: 1.8868, dep_loss: 5.2983, loss: 4.0465, acc: 0.9907, test_acc: 0.8409, f1: 0.7528
+con_loss1: 2.0087, con_loss2: 2.0022, dep_loss: 5.2983, loss: 4.1932, acc: 0.9888, test_acc: 0.8409, f1: 0.7528
+con_loss1: 1.9132, con_loss2: 1.8912, dep_loss: 5.2983, loss: 4.0659, acc: 0.9892, test_acc: 0.8427, f1: 0.7628
+con_loss1: 2.0574, con_loss2: 2.0151, dep_loss: 5.2983, loss: 4.1576, acc: 0.9896, test_acc: 0.8427, f1: 0.7647
+con_loss1: 1.7330, con_loss2: 1.6904, dep_loss: 5.2983, loss: 3.8353, acc: 0.9899, test_acc: 0.8436, f1: 0.7688
+con_loss1: 1.8965, con_loss2: 1.9132, dep_loss: 5.2983, loss: 4.0663, acc: 0.9902, test_acc: 0.8427, f1: 0.7676
+con_loss1: 1.7457, con_loss2: 1.7394, dep_loss: 5.2983, loss: 3.8640, acc: 0.9905, test_acc: 0.8427, f1: 0.7689
+con_loss1: 1.8181, con_loss2: 1.8245, dep_loss: 5.2983, loss: 3.9433, acc: 0.9908, test_acc: 0.8436, f1: 0.7698
+con_loss1: 1.8424, con_loss2: 1.8086, dep_loss: 5.2983, loss: 3.9471, acc: 0.9911, test_acc: 0.8418, f1: 0.7698
+con_loss1: 1.7943, con_loss2: 1.8117, dep_loss: 5.2983, loss: 3.9652, acc: 0.9913, test_acc: 0.8436, f1: 0.7746
+con_loss1: 1.7247, con_loss2: 1.7144, dep_loss: 5.2983, loss: 3.8439, acc: 0.9916, test_acc: 0.8436, f1: 0.7753
+con_loss1: 1.6809, con_loss2: 1.6613, dep_loss: 5.2983, loss: 3.7923, acc: 0.9918, test_acc: 0.8454, f1: 0.7675
+con_loss1: 1.7332, con_loss2: 1.6989, dep_loss: 5.2983, loss: 3.8377, acc: 0.9920, test_acc: 0.8463, f1: 0.7616
+con_loss1: 1.8399, con_loss2: 1.8344, dep_loss: 5.2983, loss: 3.9583, acc: 0.9922, test_acc: 0.8445, f1: 0.7599
+con_loss1: 1.7132, con_loss2: 1.7076, dep_loss: 5.2983, loss: 3.8389, acc: 0.9924, test_acc: 0.8481, f1: 0.7682
+con_loss1: 1.7248, con_loss2: 1.7057, dep_loss: 5.2983, loss: 3.8371, acc: 0.9926, test_acc: 0.8517, f1: 0.7791
+con_loss1: 1.8639, con_loss2: 1.8669, dep_loss: 5.2983, loss: 4.1320, acc: 0.9913, test_acc: 0.8490, f1: 0.7841
+con_loss1: 2.1329, con_loss2: 2.1297, dep_loss: 5.2983, loss: 4.2523, acc: 0.9915, test_acc: 0.8427, f1: 0.7832
+con_loss1: 1.7833, con_loss2: 1.7619, dep_loss: 5.2983, loss: 3.9012, acc: 0.9917, test_acc: 0.8418, f1: 0.7662
+con_loss1: 1.3541, con_loss2: 1.3384, dep_loss: 5.2983, loss: 3.4675, acc: 0.9918, test_acc: 0.8320, f1: 0.7281
+max_test_acc: 0.8739946380697051, max_f1: 0.8211561448562105
+>> saved: ./state_dict/tclbert_restaurant_acc_0.8740_f1_0.8212
+############################################################
+max_test_acc_overall:0.8739946380697051
+max_f1_overall:0.8211561448562105
+Precision, Recall and F1-Score...
+              precision    recall  f1-score   support
+
+           0     0.9291    0.9367    0.9329       727
+           1     0.8556    0.7857    0.8191       196
+           2     0.6942    0.7296    0.7114       196
+
+    accuracy                         0.8740      1119
+   macro avg     0.8263    0.8173    0.8212      1119
+weighted avg     0.8750    0.8740    0.8742      1119
+
+Confusion Matrix...
+[[681  10  36]
+ [ 15 154  27]
+ [ 37  16 143]]
+

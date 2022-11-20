@@ -1,0 +1,54 @@
+n_trainable_params: 112454865, n_nontrainable_params: 0
+training arguments:
+>>> model_name: tclbert
+>>> dataset: twitter
+>>> optimizer: <class 'torch.optim.adam.Adam'>
+>>> initializer: <function xavier_uniform_ at 0x115f96440>
+>>> learning_rate: 0.002
+>>> l2reg: 0.0001
+>>> num_epoch: 1
+>>> batch_size: 16
+>>> log_step: 5
+>>> embed_dim: 300
+>>> post_dim: 30
+>>> pos_dim: 30
+>>> deptag_dim: 30
+>>> hidden_dim: 50
+>>> num_layers: 2
+>>> polarities_dim: 3
+>>> input_dropout: 0.7
+>>> gcn_dropout: 0.1
+>>> lower: True
+>>> direct: False
+>>> loop: True
+>>> bidirect: True
+>>> rnn_hidden: 50
+>>> rnn_layers: 1
+>>> rnn_dropout: 0.1
+>>> attention_heads: 1
+>>> max_length: 100
+>>> device: cpu
+>>> seed: 1000
+>>> weight_decay: 0.0
+>>> vocab_dir: ./dataset/Laptops_corenlp
+>>> pad_id: 0
+>>> reshape: True
+>>> cuda: 0
+>>> alpha: 0.25
+>>> beta: 1
+>>> theta: 1
+>>> gamma: 1
+>>> temperature: 0.1
+>>> pretrained_bert_name: bert-base-uncased
+>>> adam_epsilon: 1e-08
+>>> bert_dim: 768
+>>> bert_dropout: 0.3
+>>> diff_lr: False
+>>> bert_lr: 2e-05
+>>> model_class: <class 'models.tcl_bert.TCLBertClassifier'>
+>>> dataset_file: {'train': './dataset/Tweets_corenlp/train.json', 'test': './dataset/Tweets_corenlp/test.json'}
+>>> inputs_cols: ['text_bert_indices', 'bert_segments_ids', 'attention_mask', 'src_mask', 'aspect_mask', 'deptag', 'pos_mask']
+>>> deptag_size: 41
+bert learning rate on
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch: 0
