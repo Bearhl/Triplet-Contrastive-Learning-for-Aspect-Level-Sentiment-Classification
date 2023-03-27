@@ -22,4 +22,4 @@ To install requirements, run `pip install -r requirements.txt`.
 
 3. Training:
 
-​		 `sh /run.sh`
+   `sh /run.sh`
